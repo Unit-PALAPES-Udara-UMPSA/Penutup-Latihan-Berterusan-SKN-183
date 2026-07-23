@@ -305,6 +305,45 @@
   .nav-btn.active svg{stroke:var(--gold-light);}
 
   #ytframe{position:fixed;width:2px;height:2px;bottom:0;right:0;border:0;opacity:0.01;pointer-events:none;}
+
+  /* ---------- DRESS CODE CARDS ---------- */
+  .dress-scroll{
+    display:flex;gap:12px;overflow-x:auto;padding:4px 2px 10px;
+    scrollbar-width:none;-webkit-overflow-scrolling:touch;
+  }
+  .dress-scroll::-webkit-scrollbar{display:none;}
+  .dress-card{
+    flex-shrink:0;width:150px;
+    background:linear-gradient(160deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
+    border:1px solid rgba(201,165,68,0.28);
+    border-radius:18px;padding:0 0 16px;overflow:hidden;
+  }
+  .dress-icon-wrap{
+    width:100%;height:120px;
+    display:flex;align-items:center;justify-content:center;
+    border-bottom:1px solid rgba(201,165,68,0.18);
+    margin-bottom:10px;
+  }
+  .dress-cat{
+    font-size:9px;letter-spacing:2px;text-transform:uppercase;
+    color:var(--gold);margin:0 0 3px;text-align:center;
+  }
+  .dress-name{
+    font-family:'Cormorant Garamond',serif;font-size:14px;
+    color:var(--ivory);margin:0 0 8px;text-align:center;padding:0 8px;
+    line-height:1.2;
+  }
+  .dress-tips{
+    list-style:none;margin:0;padding:0 12px;
+    display:flex;flex-direction:column;gap:4px;
+  }
+  .dress-tips li{
+    font-size:10.5px;color:var(--muted);line-height:1.4;
+    padding-left:8px;position:relative;
+  }
+  .dress-tips li:not(:has(❌))::before{
+    content:"·";position:absolute;left:0;color:var(--gold);
+  }
 </style>
 </head>
 <body>
@@ -363,15 +402,15 @@
 
         <div class="card corner-frame">
           <div class="datetime-row">
-            <div class="dt-box"><span class="num">12</span><span class="lbl">Disember</span></div>
-            <div class="dt-box"><span class="num">2026</span><span class="lbl">Sabtu</span></div>
+            <div class="dt-box"><span class="num">29</span><span class="lbl">Julai</span></div>
+            <div class="dt-box"><span class="num">2026</span><span class="lbl">Rabu</span></div>
             <div class="dt-box"><span class="num">8:00</span><span class="lbl">Malam</span></div>
           </div>
           <div class="venue-line">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#c9a544" stroke-width="2"><path d="M12 22s7-7.58 7-13A7 7 0 105 9c0 5.42 7 13 7 13z"/><circle cx="12" cy="9" r="2.5"/></svg>
-            <span>Dewan Grand Ballroom, Hotel Istana</span>
+            <span>D'lamar Dia, Kuantan</span>
           </div>
-          <p class="venue-sub">73 Jalan Raja Chulan, 50200 Kuala Lumpur</p>
+          <p class="venue-sub">No A1, Lorong Jaya Gading, Jalan Jaya Gading 1, 26070 Kuantan, Pahang</p>
 
           <p class="countdown-title">Menghitung Detik</p>
           <div class="countdown">
@@ -382,25 +421,91 @@
           </div>
 
           <div class="map-btns">
-            <a class="map-btn waze" target="_blank" href="https://waze.com/ul?ll=3.1516,101.7118&navigate=yes">
+            <a class="map-btn waze" target="_blank" href="https://waze.com/ul?ll=3.7513778,103.2042907&navigate=yes">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="9" cy="10" r="1"/><circle cx="15" cy="10" r="1"/><path d="M8 15c1.5 1.3 6.5 1.3 8 0"/></svg>
               Waze
             </a>
-            <a class="map-btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=3.1516,101.7118">
+            <a class="map-btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=3.7513778,103.2042907">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-7.58 7-13A7 7 0 105 9c0 5.42 7 13 7 13z"/><circle cx="12" cy="9" r="2.5"/></svg>
-              Google Map
+              Google Maps
             </a>
           </div>
         </div>
 
-        <p class="section-title">Detik Kenangan Kami</p>
-        <p class="section-sub">Sepanjang tahun bersama</p>
-        <div class="gallery-strip">
-          <img src="https://picsum.photos/seed/gala1/240/300" alt="Kenangan 1">
-          <img src="https://picsum.photos/seed/gala2/240/300" alt="Kenangan 2">
-          <img src="https://picsum.photos/seed/gala3/240/300" alt="Kenangan 3">
-          <img src="https://picsum.photos/seed/gala4/240/300" alt="Kenangan 4">
-          <img src="https://picsum.photos/seed/gala5/240/300" alt="Kenangan 5">
+        <p class="section-title">Cadangan Pemakaian</p>
+        <p class="section-sub">Semasa Majlis Penutup LB SKN 183</p>
+
+        <div class="dress-scroll">
+
+          <!-- Kad 1: Lelaki Formal -->
+          <div class="dress-card">
+            <div class="dress-icon-wrap" style="padding:0;overflow:hidden;">
+              <img src="C:\Users\meorm\.gemini\antigravity-ide\brain\3e3c433e-cfb0-48b9-9eb7-ceaa0eb206a2\dress_lelaki_formal_1784791161282.png" alt="Pakaian Formal Lelaki" style="width:100%;height:100%;object-fit:cover;object-position:top;">
+            </div>
+            <p class="dress-cat">Lelaki</p>
+            <p class="dress-name">Black Tie Masquerade</p>
+            <ul class="dress-tips">
+              <li>Tuxedo / sut hitam malam</li>
+              <li>Bow tie atau tali leher emas</li>
+              <li>Kemeja putih berlengan panjang</li>
+              <li>Kasut Oxford hitam berkilat</li>
+              <li>Topeng sebagai aksesori</li>
+            </ul>
+          </div>
+
+          <!-- Kad 2: Wanita Formal -->
+          <div class="dress-card">
+            <div class="dress-icon-wrap" style="padding:0;overflow:hidden;">
+              <img src="C:\Users\meorm\.gemini\antigravity-ide\brain\3e3c433e-cfb0-48b9-9eb7-ceaa0eb206a2\dress_wanita_gown_1784791173611.png" alt="Pakaian Formal Wanita" style="width:100%;height:100%;object-fit:cover;object-position:top;">
+            </div>
+            <p class="dress-cat">Wanita</p>
+            <p class="dress-name">Glamour Gala Night</p>
+            <ul class="dress-tips">
+              <li>Gaun malam panjang penuh</li>
+              <li>Warna gelap berkilauan</li>
+              <li>Barang kemas emas / berlian</li>
+              <li>Kasut tumit tinggi elegan</li>
+              <li>Clutch bag mewah</li>
+            </ul>
+          </div>
+
+          <!-- Kad 3: Palet Warna -->
+          <div class="dress-card">
+            <div class="dress-icon-wrap" style="padding:0;overflow:hidden;">
+              <img src="C:\Users\meorm\.gemini\antigravity-ide\brain\3e3c433e-cfb0-48b9-9eb7-ceaa0eb206a2\dress_warna_palet_1784791293160.png" alt="Palet Warna" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <p class="dress-cat">Palet Warna</p>
+            <p class="dress-name">Warna Bertopeng</p>
+            <ul class="dress-tips">
+              <li>Hitam Misteri</li>
+              <li>Burgundy Berdarah</li>
+              <li>Biru Tengah Malam</li>
+              <li>Zamrud Mahkota</li>
+              <li>Ungu &amp; Emas Diraja</li>
+            </ul>
+          </div>
+
+          <!-- Kad 4: Larangan -->
+          <div class="dress-card">
+            <div class="dress-icon-wrap" style="padding:0;overflow:hidden;position:relative;">
+              <img src="C:\Users\meorm\.gemini\antigravity-ide\brain\3e3c433e-cfb0-48b9-9eb7-ceaa0eb206a2\dress_elak_casual_1784791311646.png" alt="Pakaian Tidak Digalakkan" style="width:100%;height:100%;object-fit:cover;filter:grayscale(30%) brightness(0.7);">
+              <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
+                <svg viewBox="0 0 60 60" width="56" height="56" fill="none">
+                  <circle cx="30" cy="30" r="28" stroke="#c9594a" stroke-width="3" opacity="0.9"/>
+                  <line x1="10" y1="10" x2="50" y2="50" stroke="#c9594a" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+                </svg>
+              </div>
+            </div>
+            <p class="dress-cat" style="color:#c9594a;">Elakkan</p>
+            <p class="dress-name">Pemakaian Yang Kurang Sesuai</p>
+            <ul class="dress-tips">
+              <li>❌ T-shirt &amp; seluar jeans</li>
+              <li>❌ Selipar atau sandal</li>
+              <li>❌ Baju sukan </li>
+              <li>❌ Pakaian tidak sopan</li>
+            </ul>
+          </div>
+
         </div>
 
         <div class="cta-wrap">
@@ -411,7 +516,7 @@
       <!-- ---------- TENTATIVE ---------- -->
       <section class="page" id="page-tentative">
         <p class="section-title">Atur Cara Majlis</p>
-        <p class="section-sub">Sabtu, 12 Disember 2026</p>
+        <p class="section-sub">Rabu, 29 Julai 2026</p>
         <div class="card">
           <div class="tl">
             <div class="tl-item">
@@ -493,7 +598,7 @@
       <!-- ---------- RSVP ---------- -->
       <section class="page" id="page-rsvp">
         <p class="section-title">Sahkan Kehadiran</p>
-        <p class="section-sub">Mohon balas sebelum 30 November 2026</p>
+        <p class="section-sub">Mohon balas sebelum 28 Julai 2026</p>
         <div class="card" id="rsvpForm">
           <div class="field">
             <label>Kategori</label>
@@ -538,7 +643,7 @@
     <nav id="footer">
       <button class="nav-btn active" data-page="home">
         <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg>
-        <span>Home</span>
+        <span>Utama</span>
       </button>
       <button class="nav-btn" data-page="tentative">
         <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18"/><path d="M8 3v4M16 3v4"/></svg>
@@ -561,7 +666,7 @@
 
 <script>
   /* ============ TETAPAN BOLEH UBAH ============ */
-  const EVENT_DATE = new Date("2026-12-12T20:00:00+08:00"); // tarikh & masa majlis
+  const EVENT_DATE = new Date("2026-07-29T20:00:00+08:00"); // tarikh & masa majlis
   const YOUTUBE_VIDEO_ID = "f-PRMB1SsHM"; // GANTI dengan ID video YouTube (bahagian selepas v= dalam URL)
   const YOUTUBE_START_SECONDS = 36; // video akan mula main dari saat ke-36
   const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzRiI4rchQllg5oE7gCd9aSVBy4jKMv6LioAPIfkqdwlFCLX1jgcwXKa9FVYknAE9g6QQ/exec"; // URL Web App Apps Script (sudah deploy)
@@ -728,8 +833,8 @@
         });
       }
       const msg = attending === 'ya'
-        ? `Terima kasih, ${name}. Kami tidak sabar meraikan malam gala ini bersama anda!`
-        : `Terima kasih atas maklum balas anda, ${name}. Anda akan dirindui pada malam gala ini.`;
+        ? `Terima kasih, ${name}. Kami tidak sabar untuk meraikan Malam Gala Bertopeng bersama anda!`
+        : `Terima kasih kerana memaklumkan, ${name}. Ketidakhadiran anda akan kami rasai pada malam yang istimewa ini.`;
       document.getElementById('thanksMsg').textContent = msg;
       document.getElementById('rsvpForm').style.display = 'none';
       document.getElementById('rsvpThanks').classList.add('show');
