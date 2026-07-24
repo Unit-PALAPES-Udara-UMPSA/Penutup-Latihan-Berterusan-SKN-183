@@ -1,849 +1,1556 @@
 <!DOCTYPE html>
 <html lang="ms">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>Malam Gala Bertopeng — Penutup Latihan Berterusan SKN 183</title>
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#0c0a13">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Gala SKN 183">
-<link rel="apple-touch-icon" href="icons/icon-192.png">
-<link rel="icon" href="icons/icon-192.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --ink:#0c0a13;
-    --ink-2:#15111f;
-    --wine:#4a0e1f;
-    --wine-2:#2c0a15;
-    --emerald:#122822;
-    --gold:#c9a544;
-    --gold-light:#eaddac;
-    --gold-dim:#8a6f34;
-    --ivory:#f3ead2;
-    --muted:#a9977a;
-    --danger:#7a1f2b;
-    --radius:22px;
-  }
-  *{box-sizing:border-box;}
-  html,body{margin:0;padding:0;}
-  body{
-    min-height:100vh;
-    background:
-      radial-gradient(circle at 20% 15%, rgba(201,165,68,0.10), transparent 40%),
-      radial-gradient(circle at 85% 75%, rgba(74,14,31,0.35), transparent 45%),
-      radial-gradient(circle at 50% 100%, rgba(18,40,34,0.4), transparent 50%),
-      var(--ink);
-    font-family:'Montserrat',sans-serif;
-    color:var(--ivory);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:24px 12px;
-    overflow-x:hidden;
-  }
-  .bokeh{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0;}
-  .bokeh span{position:absolute;border-radius:50%;background:radial-gradient(circle, rgba(201,165,68,0.55), transparent 70%);filter:blur(1px);opacity:.5;animation:drift 14s ease-in-out infinite;}
-  @keyframes drift{0%,100%{transform:translateY(0)}50%{transform:translateY(-18px)}}
-  @media (prefers-reduced-motion: reduce){
-    .bokeh span{animation:none;}
-  }
-
-  .phone{
-    position:relative;
-    z-index:1;
-    width:390px;
-    max-width:100%;
-    height:820px;
-    max-height:92vh;
-    background:linear-gradient(180deg, var(--ink-2), var(--ink) 60%);
-    border-radius:44px;
-    border:1px solid rgba(201,165,68,0.35);
-    box-shadow:0 30px 80px rgba(0,0,0,0.6), inset 0 0 0 6px rgba(0,0,0,0.35), inset 0 0 40px rgba(201,165,68,0.05);
-    overflow:hidden;
-    display:flex;
-    flex-direction:column;
-  }
-  .notch{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:110px;height:20px;background:#000;border-radius:12px;z-index:50;}
-
-  /* Di skrin telefon sebenar (viewport kecil): buang bezel/notch,
-     phone card jadi full-screen macam app asli */
-  @media (max-width: 480px){
-    body{padding:0;align-items:stretch;}
-    .phone{
-      width:100%;
-      height:100vh;
-      height:100dvh;
-      max-height:none;
-      max-width:none;
-      border-radius:0;
-      border:none;
-      box-shadow:none;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Masquerade In Garden — Majlis Penutup Latihan Berterusan SKN 183 Tahun 2026</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#f5edd8">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Gala SKN 183">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a2e1e;
+      --ink-2: #243d28;
+      --wine: #4a0e1f;
+      --wine-2: #f0e4c4;
+      --emerald: #1a3a2a;
+      --gold: #b8892a;
+      --gold-light: #c9a544;
+      --gold-dim: #8a6f34;
+      --gold-warm: #b58c4f;
+      --gold-warm-2: #d4a96a;
+      --ivory: #f7f0dc;
+      --cream: #faf5e8;
+      --parchment: #f5edd8;
+      --muted: #8a7355;
+      --danger: #7a1f2b;
+      --radius: 22px;
     }
-    .notch{display:none;}
-  }
 
-  /* ---------- SPLASH ---------- */
-  #splash{
-    position:absolute;inset:0;z-index:40;
-    display:flex;flex-direction:column;align-items:center;justify-content:center;
-    text-align:center;padding:40px 30px;
-    background:
-      radial-gradient(circle at 50% 30%, rgba(201,165,68,0.12), transparent 55%),
-      linear-gradient(180deg, var(--wine-2), var(--ink) 70%);
-    transition:opacity .9s ease, visibility .9s ease;
-  }
-  #splash.hide{opacity:0;visibility:hidden;pointer-events:none;}
-  .mask-icon{width:120px;height:120px;margin-bottom:22px;filter:drop-shadow(0 6px 18px rgba(201,165,68,0.35));}
-  .eyebrow{
-    font-family:'Cinzel Decorative',serif;
-    font-size:11px;letter-spacing:4px;
-    color:var(--gold);
-    text-transform:uppercase;
-    margin:0 0 10px;
-  }
-  .display-title{
-    font-family:'Cormorant Garamond',serif;
-    font-weight:600;
-    font-size:40px;
-    line-height:1.1;
-    color:var(--ivory);
-    margin:0 0 14px;
-  }
-  .display-title em{color:var(--gold-light);font-style:italic;}
-  .splash-sub{
-    font-size:12.5px;color:var(--muted);letter-spacing:.5px;margin-bottom:34px;line-height:1.6;
-  }
-  .btn-gold{
-    font-family:'Montserrat',sans-serif;
-    font-weight:600;
-    font-size:12.5px;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    color:var(--ink);
-    background:linear-gradient(135deg, var(--gold-light), var(--gold));
-    border:none;
-    padding:15px 34px;
-    border-radius:100px;
-    cursor:pointer;
-    box-shadow:0 10px 24px rgba(201,165,68,0.25);
-    transition:transform .2s ease, box-shadow .2s ease;
-  }
-  .btn-gold:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(201,165,68,0.35);}
-  .btn-gold:active{transform:translateY(0);}
-  .btn-install{
-    margin-top:14px;
-    font-family:'Montserrat',sans-serif;font-weight:500;font-size:11.5px;letter-spacing:1px;
-    color:var(--gold-light);background:transparent;border:1px solid rgba(201,165,68,0.4);
-    padding:11px 22px;border-radius:100px;cursor:pointer;
-  }
-  .divider-orn{width:140px;height:14px;margin:18px auto;opacity:.7;}
+    * {
+      box-sizing: border-box;
+    }
 
-  /* ---------- APP SHELL ---------- */
-  .app{position:relative;flex:1;display:flex;flex-direction:column;min-height:0;}
-  #topbar{
-    display:flex;align-items:center;justify-content:space-between;
-    padding:22px 18px 10px;
-    flex-shrink:0;
-  }
-  #backBtn{
-    width:34px;height:34px;border-radius:50%;
-    border:1px solid rgba(201,165,68,0.4);
-    background:rgba(255,255,255,0.03);
-    color:var(--gold-light);
-    display:none;align-items:center;justify-content:center;
-    cursor:pointer;
-  }
-  #backBtn.show{display:flex;}
-  #topbar h2{
-    font-family:'Cinzel Decorative',serif;
-    font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);
-    margin:0;
-  }
-  #muteBtn{
-    width:34px;height:34px;border-radius:50%;
-    border:1px solid rgba(201,165,68,0.4);
-    background:rgba(255,255,255,0.03);color:var(--gold-light);
-    display:flex;align-items:center;justify-content:center;cursor:pointer;
-  }
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
 
-  #content{flex:1;overflow-y:auto;padding:6px 20px 30px;scrollbar-width:none;}
-  #content::-webkit-scrollbar{display:none;}
-  .page{display:none;animation:fadeUp .5s ease;}
-  .page.active{display:block;}
-  @keyframes fadeUp{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+    body {
+      min-height: 100vh;
+      background-color: #e8d5b7;
+      background-image:
+        /* Top-left rose cluster */
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'%3E%3Ccircle cx='60' cy='60' r='28' fill='rgba(210,150,160,0.28)'/%3E%3Ccircle cx='45' cy='75' r='18' fill='rgba(230,180,170,0.22)'/%3E%3Ccircle cx='80' cy='45' r='16' fill='rgba(210,150,160,0.20)'/%3E%3Ccircle cx='60' cy='60' r='10' fill='rgba(200,120,130,0.30)'/%3E%3Cellipse cx='30' cy='100' rx='22' ry='12' fill='rgba(100,160,100,0.18)' transform='rotate(-30 30 100)'/%3E%3Cellipse cx='90' cy='25' rx='18' ry='10' fill='rgba(100,160,100,0.15)' transform='rotate(20 90 25)'/%3E%3Cellipse cx='20' cy='55' rx='16' ry='9' fill='rgba(120,170,110,0.18)' transform='rotate(-50 20 55)'/%3E%3Cpath d='M55 65 Q30 90 15 120' stroke='rgba(100,140,90,0.25)' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3Cpath d='M65 55 Q90 30 110 20' stroke='rgba(100,140,90,0.20)' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"),
+        /* Bottom-right rose cluster */
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'%3E%3Ccircle cx='160' cy='160' r='30' fill='rgba(230,180,150,0.25)'/%3E%3Ccircle cx='145' cy='175' r='20' fill='rgba(210,150,140,0.22)'/%3E%3Ccircle cx='175' cy='148' r='17' fill='rgba(230,170,160,0.20)'/%3E%3Ccircle cx='160' cy='160' r='11' fill='rgba(200,120,110,0.28)'/%3E%3Cellipse cx='195' cy='130' rx='20' ry='11' fill='rgba(100,160,100,0.18)' transform='rotate(40 195 130)'/%3E%3Cellipse cx='130' cy='195' rx='18' ry='10' fill='rgba(100,160,100,0.15)' transform='rotate(-20 130 195)'/%3E%3Cpath d='M165 155 Q190 130 210 110' stroke='rgba(100,140,90,0.22)' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3Cpath d='M155 165 Q130 190 110 210' stroke='rgba(100,140,90,0.20)' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"),
+        /* Top-right small flowers */
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Ccircle cx='120' cy='30' r='18' fill='rgba(210,180,200,0.22)'/%3E%3Ccircle cx='110' cy='42' r='12' fill='rgba(190,150,170,0.20)'/%3E%3Ccircle cx='130' cy='20' r='10' fill='rgba(200,160,180,0.22)'/%3E%3Ccircle cx='120' cy='30' r='6' fill='rgba(180,120,140,0.28)'/%3E%3Cellipse cx='145' cy='55' rx='15' ry='8' fill='rgba(100,160,100,0.15)' transform='rotate(30 145 55)'/%3E%3Cellipse cx='100' cy='15' rx='13' ry='7' fill='rgba(120,170,110,0.15)' transform='rotate(-20 100 15)'/%3E%3C/svg%3E"),
+        /* Bottom-left small flowers */
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Ccircle cx='35' cy='130' r='20' fill='rgba(230,195,180,0.22)'/%3E%3Ccircle cx='25' cy='142' r='13' fill='rgba(210,165,155,0.20)'/%3E%3Ccircle cx='48' cy='120' r='11' fill='rgba(220,180,168,0.22)'/%3E%3Ccircle cx='35' cy='130' r='7' fill='rgba(190,130,118,0.28)'/%3E%3Cellipse cx='12' cy='105' rx='14' ry='8' fill='rgba(100,160,100,0.15)' transform='rotate(-35 12 105)'/%3E%3Cellipse cx='60' cy='148' rx='13' ry='7' fill='rgba(120,170,110,0.15)' transform='rotate(15 60 148)'/%3E%3C/svg%3E"),
+        /* Centre soft glow */
+        radial-gradient(ellipse at 50% 50%, rgba(255, 245, 220, 0.60) 0%, transparent 65%),
+        /* Corner gold vignette */
+        radial-gradient(ellipse at 0% 0%, rgba(184, 137, 42, 0.12) 0%, transparent 45%),
+        radial-gradient(ellipse at 100% 100%, rgba(184, 137, 42, 0.12) 0%, transparent 45%),
+        radial-gradient(ellipse at 100% 0%, rgba(200, 160, 100, 0.10) 0%, transparent 40%),
+        radial-gradient(ellipse at 0% 100%, rgba(200, 160, 100, 0.10) 0%, transparent 40%);
+      background-position:
+        top left,
+        bottom right,
+        top right,
+        bottom left,
+        center, top left, bottom right, top right, bottom left;
+      background-repeat: no-repeat;
+      background-size:
+        280px 280px,
+        280px 280px,
+        200px 200px,
+        200px 200px,
+        100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+      font-family: 'Montserrat', sans-serif;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 12px;
+      overflow-x: hidden;
+    }
 
-  .card{
-    background:linear-gradient(160deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
-    border:1px solid rgba(201,165,68,0.25);
-    border-radius:var(--radius);
-    padding:20px;
-    margin-bottom:16px;
-  }
-  .corner-frame{position:relative;}
-  .corner-frame::before,.corner-frame::after{
-    content:"";position:absolute;width:16px;height:16px;
-    border-top:1.5px solid var(--gold);border-left:1.5px solid var(--gold);
-    top:8px;left:8px;
-  }
-  .corner-frame::after{
-    top:auto;left:auto;bottom:8px;right:8px;
-    border-top:none;border-left:none;
-    border-bottom:1.5px solid var(--gold);border-right:1.5px solid var(--gold);
-  }
+    .bokeh {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
 
-  .home-hero{text-align:center;padding:14px 6px 4px;}
-  .home-hero .eyebrow{margin-top:4px;}
-  .home-hero h1{
-    font-family:'Cormorant Garamond',serif;font-weight:600;
-    font-size:32px;line-height:1.15;margin:6px 0 8px;color:var(--ivory);
-  }
-  .home-hero .org{font-size:12px;color:var(--muted);letter-spacing:1px;margin-bottom:6px;}
+    .bokeh span {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(184, 137, 42, 0.35), transparent 70%);
+      filter: blur(1px);
+      opacity: .4;
+      animation: drift 14s ease-in-out infinite;
+    }
 
-  .datetime-row{display:flex;gap:10px;margin-bottom:14px;}
-  .dt-box{flex:1;text-align:center;padding:14px 6px;border-radius:16px;background:rgba(201,165,68,0.06);border:1px solid rgba(201,165,68,0.2);}
-  .dt-box .num{font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--gold-light);display:block;}
-  .dt-box .lbl{font-size:9.5px;letter-spacing:1.5px;color:var(--muted);text-transform:uppercase;}
+    @keyframes drift {
 
-  .venue-line{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--ivory);margin-bottom:4px;}
-  .venue-line svg{flex-shrink:0;margin-top:2px;}
-  .venue-sub{font-size:11.5px;color:var(--muted);margin:2px 0 16px 26px;}
+      0%,
+      100% {
+        transform: translateY(0)
+      }
 
-  .countdown-title{text-align:center;font-size:10.5px;letter-spacing:2.5px;color:var(--gold);text-transform:uppercase;margin-bottom:10px;}
-  .countdown{display:flex;justify-content:center;gap:8px;}
-  .cd-unit{text-align:center;width:58px;padding:10px 0;border-radius:14px;background:linear-gradient(160deg, rgba(201,165,68,0.14), rgba(201,165,68,0.02));border:1px solid rgba(201,165,68,0.3);}
-  .cd-unit .val{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--gold-light);}
-  .cd-unit .u{display:block;font-size:8.5px;letter-spacing:1.5px;color:var(--muted);text-transform:uppercase;margin-top:2px;}
+      50% {
+        transform: translateY(-18px)
+      }
+    }
 
-  .map-btns{display:flex;gap:10px;margin-top:16px;}
-  .map-btn{
-    flex:1;display:flex;align-items:center;justify-content:center;gap:8px;
-    padding:12px 8px;border-radius:100px;font-size:11.5px;font-weight:600;letter-spacing:.5px;
-    text-decoration:none;border:1px solid rgba(201,165,68,0.35);color:var(--ivory);
-    background:rgba(255,255,255,0.03);
-  }
-  .map-btn.waze{color:#0c0a13;background:linear-gradient(135deg,#8fd5e0,#4fb8c9);border:none;}
-  .map-btn svg{width:16px;height:16px;}
+    @media (prefers-reduced-motion: reduce) {
+      .bokeh span {
+        animation: none;
+      }
+    }
 
-  .section-title{
-    font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--gold-light);
-    text-align:center;margin:6px 0 4px;
-  }
-  .section-sub{text-align:center;font-size:11px;color:var(--muted);margin-bottom:16px;letter-spacing:.5px;}
+    .phone {
+      position: relative;
+      z-index: 1;
+      width: 390px;
+      max-width: 100%;
+      height: 820px;
+      max-height: 92vh;
+      background-color: #f8f0e0;
+      background-image:
+        /* phone top-left floral corner */
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Ccircle cx='40' cy='40' r='22' fill='rgba(210,155,155,0.22)'/%3E%3Ccircle cx='28' cy='52' r='15' fill='rgba(230,185,175,0.20)'/%3E%3Ccircle cx='55' cy='28' r='13' fill='rgba(215,160,160,0.18)'/%3E%3Ccircle cx='40' cy='40' r='8' fill='rgba(195,120,125,0.25)'/%3E%3Ccircle cx='40' cy='40' r='3.5' fill='rgba(220,180,100,0.50)'/%3E%3Cellipse cx='18' cy='75' rx='18' ry='9' fill='rgba(110,165,105,0.18)' transform='rotate(-35 18 75)'/%3E%3Cellipse cx='72' cy='18' rx='16' ry='8' fill='rgba(110,165,105,0.15)' transform='rotate(20 72 18)'/%3E%3Cellipse cx='8' cy='40' rx='14' ry='7' fill='rgba(130,175,115,0.15)' transform='rotate(-55 8 40)'/%3E%3Cpath d='M38 45 Q18 72 8 100' stroke='rgba(100,140,85,0.22)' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3Cpath d='M45 38 Q72 18 95 10' stroke='rgba(100,140,85,0.18)' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"),
+        /* phone bottom-right floral corner */
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Ccircle cx='120' cy='120' r='22' fill='rgba(230,185,165,0.22)'/%3E%3Ccircle cx='108' cy='132' r='15' fill='rgba(215,165,150,0.20)'/%3E%3Ccircle cx='133' cy='108' r='13' fill='rgba(225,175,160,0.18)'/%3E%3Ccircle cx='120' cy='120' r='8' fill='rgba(195,120,105,0.25)'/%3E%3Ccircle cx='120' cy='120' r='3.5' fill='rgba(220,180,100,0.50)'/%3E%3Cellipse cx='148' cy='95' rx='17' ry='9' fill='rgba(110,165,105,0.18)' transform='rotate(40 148 95)'/%3E%3Cellipse cx='95' cy='148' rx='16' ry='8' fill='rgba(110,165,105,0.15)' transform='rotate(-15 95 148)'/%3E%3Cpath d='M122 115 Q148 95 160 75' stroke='rgba(100,140,85,0.22)' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3Cpath d='M115 122 Q95 148 78 160' stroke='rgba(100,140,85,0.18)' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"),
+        /* phone top-right small floral */
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='110' height='110' viewBox='0 0 110 110'%3E%3Ccircle cx='80' cy='25' r='16' fill='rgba(210,180,195,0.20)'/%3E%3Ccircle cx='70' cy='35' r='10' fill='rgba(190,155,170,0.18)'/%3E%3Ccircle cx='90' cy='16' r='9' fill='rgba(205,165,180,0.20)'/%3E%3Ccircle cx='80' cy='25' r='5' fill='rgba(175,115,135,0.25)'/%3E%3Cellipse cx='100' cy='48' rx='13' ry='7' fill='rgba(110,165,105,0.15)' transform='rotate(35 100 48)'/%3E%3C/svg%3E"),
+        /* phone bottom-left small floral */
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='110' height='110' viewBox='0 0 110 110'%3E%3Ccircle cx='28' cy='88' r='16' fill='rgba(225,190,170,0.20)'/%3E%3Ccircle cx='18' cy='98' r='10' fill='rgba(205,165,148,0.18)'/%3E%3Ccircle cx='40' cy='78' r='9' fill='rgba(218,178,162,0.20)'/%3E%3Ccircle cx='28' cy='88' r='5' fill='rgba(185,120,105,0.25)'/%3E%3Cellipse cx='8' cy='65' rx='12' ry='7' fill='rgba(110,165,105,0.15)' transform='rotate(-40 8 65)'/%3E%3C/svg%3E"),
+        /* soft centre glow */
+        radial-gradient(ellipse at 50% 30%, rgba(255, 248, 235, 0.80) 0%, transparent 60%),
+        radial-gradient(ellipse at 50% 80%, rgba(240, 225, 200, 0.50) 0%, transparent 55%),
+        /* parchment base */
+        linear-gradient(170deg, #fdf6e8 0%, #f8efd4 40%, #f2e8c8 100%);
+      background-position:
+        top left,
+        bottom right,
+        top right,
+        bottom left,
+        center, center, center;
+      background-repeat: no-repeat;
+      background-size:
+        200px 200px,
+        200px 200px,
+        130px 130px,
+        130px 130px,
+        100% 100%, 100% 100%, 100% 100%;
+      border-radius: 44px;
+      border: 2px solid rgba(181, 140, 79, 0.70);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.22), 0 0 0 1px rgba(181, 140, 79, 0.20), inset 0 0 60px rgba(184, 137, 42, 0.06);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
 
-  .gallery-strip{display:flex;gap:10px;overflow-x:auto;padding:2px 2px 8px;scrollbar-width:none;}
-  .gallery-strip::-webkit-scrollbar{display:none;}
-  .gallery-strip img{
-    width:118px;height:150px;object-fit:cover;border-radius:14px;flex-shrink:0;
-    border:1px solid rgba(201,165,68,0.3);
-  }
+    /* Decorative gold vine border at top of phone */
+    .phone::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg,
+          transparent 0%,
+          rgba(184, 137, 42, 0.3) 15%,
+          rgba(184, 137, 42, 0.6) 30%,
+          rgba(212, 169, 106, 0.8) 50%,
+          rgba(184, 137, 42, 0.6) 70%,
+          rgba(184, 137, 42, 0.3) 85%,
+          transparent 100%);
+      z-index: 2;
+      pointer-events: none;
+    }
 
-  .cta-wrap{text-align:center;margin-top:6px;}
-  .btn-outline{
-    display:inline-block;font-size:11.5px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;
-    color:var(--gold-light);border:1px solid var(--gold);padding:13px 26px;border-radius:100px;
-    background:transparent;cursor:pointer;
-  }
+    .notch {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 110px;
+      height: 20px;
+      background: #000;
+      border-radius: 12px;
+      z-index: 50;
+    }
 
-  /* Tentative timeline */
-  .tl{position:relative;margin-left:14px;padding-left:22px;border-left:1px solid rgba(201,165,68,0.35);}
-  .tl-item{position:relative;padding-bottom:22px;}
-  .tl-item:last-child{padding-bottom:0;}
-  .tl-item::before{
-    content:"";position:absolute;left:-27px;top:2px;width:10px;height:10px;border-radius:50%;
-    background:var(--gold);box-shadow:0 0 0 3px rgba(201,165,68,0.2);
-  }
-  .tl-time{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--gold-light);margin-bottom:2px;}
-  .tl-label{font-size:12.5px;color:var(--ivory);}
-  .tl-note{font-size:11px;color:var(--muted);margin-top:2px;}
+    /* Di skrin telefon sebenar (viewport kecil): buang bezel/notch,
+     phone card jadi full-screen macam app asli */
+    @media (max-width: 480px) {
+      body {
+        padding: 0;
+        align-items: stretch;
+      }
 
-  /* Menu */
-  .menu-card{background:linear-gradient(160deg, rgba(18,40,34,0.6), rgba(18,40,34,0.25));border-color:rgba(201,165,68,0.3);}
-  .menu-course{margin-bottom:16px;}
-  .menu-course:last-child{margin-bottom:0;}
-  .course-eyebrow{font-size:9.5px;letter-spacing:2.5px;color:var(--gold);text-transform:uppercase;margin-bottom:4px;}
-  .course-name{font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--ivory);margin-bottom:2px;}
-  .course-desc{font-size:11.5px;color:var(--muted);line-height:1.5;}
-  .menu-hr{border:none;border-top:1px dashed rgba(201,165,68,0.25);margin:14px 0;}
+      .phone {
+        width: 100%;
+        height: 100vh;
+        height: 100dvh;
+        max-height: none;
+        max-width: none;
+        border-radius: 0;
+        border: none;
+        box-shadow: none;
+      }
 
-  /* RSVP */
-  .field{margin-bottom:14px;}
-  .field label{display:block;font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:6px;}
-  .field input, .field select, .field textarea{
-    width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(201,165,68,0.3);
-    background:rgba(255,255,255,0.03);color:var(--ivory);font-family:'Montserrat',sans-serif;font-size:13px;
-  }
-  .field textarea{resize:none;height:70px;}
-  .radio-row{display:flex;gap:10px;}
-  .category-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-  .radio-opt{flex:1;text-align:center;padding:12px 0;border-radius:12px;border:1px solid rgba(201,165,68,0.3);cursor:pointer;font-size:12.5px;}
-  .radio-opt.selected{background:linear-gradient(135deg, var(--gold-light), var(--gold));color:var(--ink);font-weight:600;border-color:transparent;}
-  #rsvpForm .btn-gold{width:100%;margin-top:6px;}
-  #rsvpThanks{display:none;text-align:center;padding:30px 10px;}
-  #rsvpThanks.show{display:block;}
-  #rsvpThanks .mask-icon{width:80px;height:80px;}
+      .notch {
+        display: none;
+      }
+    }
 
-  /* Footer nav */
-  #footer{
-    display:flex;flex-shrink:0;
-    border-top:1px solid rgba(201,165,68,0.2);
-    background:rgba(10,8,16,0.85);
-    backdrop-filter:blur(6px);
-  }
-  .nav-btn{
-    flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;
-    padding:12px 0 16px;background:none;border:none;cursor:pointer;color:var(--muted);
-  }
-  .nav-btn svg{width:20px;height:20px;stroke:var(--muted);transition:stroke .2s;}
-  .nav-btn span{font-size:9.5px;letter-spacing:1px;text-transform:uppercase;}
-  .nav-btn.active{color:var(--gold-light);}
-  .nav-btn.active svg{stroke:var(--gold-light);}
+    /* ---------- SPLASH ---------- */
+    #splash {
+      position: absolute;
+      inset: 0;
+      z-index: 40;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 30px;
+      background:
+        radial-gradient(circle at 50% 30%, rgba(201, 165, 68, 0.20), transparent 55%),
+        linear-gradient(180deg, #f0e4c4, var(--parchment) 70%);
+      transition: opacity .9s ease, visibility .9s ease;
+    }
 
-  #ytframe{position:fixed;width:2px;height:2px;bottom:0;right:0;border:0;opacity:0.01;pointer-events:none;}
+    #splash.hide {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
 
-  /* ---------- DRESS CODE CARDS ---------- */
-  .dress-scroll{
-    display:flex;gap:12px;overflow-x:auto;padding:4px 2px 10px;
-    scrollbar-width:none;-webkit-overflow-scrolling:touch;
-  }
-  .dress-scroll::-webkit-scrollbar{display:none;}
-  .dress-card{
-    flex-shrink:0;width:150px;
-    background:linear-gradient(160deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
-    border:1px solid rgba(201,165,68,0.28);
-    border-radius:18px;padding:0 0 16px;overflow:hidden;
-  }
-  .dress-icon-wrap{
-    width:100%;height:120px;
-    display:flex;align-items:center;justify-content:center;
-    border-bottom:1px solid rgba(201,165,68,0.18);
-    margin-bottom:10px;
-  }
-  .dress-cat{
-    font-size:9px;letter-spacing:2px;text-transform:uppercase;
-    color:var(--gold);margin:0 0 3px;text-align:center;
-  }
-  .dress-name{
-    font-family:'Cormorant Garamond',serif;font-size:14px;
-    color:var(--ivory);margin:0 0 8px;text-align:center;padding:0 8px;
-    line-height:1.2;
-  }
-  .dress-tips{
-    list-style:none;margin:0;padding:0 12px;
-    display:flex;flex-direction:column;gap:4px;
-  }
-  .dress-tips li{
-    font-size:10.5px;color:var(--muted);line-height:1.4;
-    padding-left:8px;position:relative;
-  }
-  .dress-tips li:not(:has(❌))::before{
-    content:"·";position:absolute;left:0;color:var(--gold);
-  }
-</style>
+    .mask-icon {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 22px;
+      filter: drop-shadow(0 6px 18px rgba(201, 165, 68, 0.35));
+    }
+
+    .eyebrow {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 11px;
+      letter-spacing: 4px;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin: 0 0 10px;
+    }
+
+    .display-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 1.1;
+      color: var(--ink);
+      margin: 0 0 14px;
+    }
+
+    .display-title em {
+      color: var(--gold-light);
+      font-style: italic;
+    }
+
+    .splash-sub {
+      font-size: 12.5px;
+      color: var(--muted);
+      letter-spacing: .5px;
+      margin-bottom: 34px;
+      line-height: 1.6;
+      text-shadow: none;
+    }
+
+    .btn-gold {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 12.5px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #fff;
+      background: linear-gradient(135deg, var(--gold-warm-2), var(--gold-warm), #9a7040);
+      border: none;
+      border-top: 1px solid rgba(255, 220, 150, 0.45);
+      padding: 15px 34px;
+      border-radius: 100px;
+      cursor: pointer;
+      box-shadow: 0 8px 22px rgba(181, 140, 79, 0.45), inset 0 1px 0 rgba(255, 230, 160, 0.3);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 32px rgba(181, 140, 79, 0.55), inset 0 1px 0 rgba(255, 230, 160, 0.3);
+    }
+
+    .btn-gold:active {
+      transform: translateY(0);
+      box-shadow: 0 4px 12px rgba(181, 140, 79, 0.35);
+    }
+
+    .btn-install {
+      margin-top: 14px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 11.5px;
+      letter-spacing: 1px;
+      color: var(--gold-warm);
+      background: rgba(181, 140, 79, 0.10);
+      border: 1px solid rgba(181, 140, 79, 0.50);
+      padding: 11px 22px;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: background .2s;
+    }
+
+    .btn-install:hover {
+      background: rgba(181, 140, 79, 0.18);
+    }
+
+    .divider-orn {
+      width: 140px;
+      height: 14px;
+      margin: 18px auto;
+      opacity: .7;
+    }
+
+    /* ---------- APP SHELL ---------- */
+    .app {
+      position: relative;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+    }
+
+    #topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px 18px 10px;
+      flex-shrink: 0;
+      border-bottom: 1px solid rgba(184, 137, 42, 0.2);
+      background: rgba(245, 237, 216, 0.8);
+      backdrop-filter: blur(6px);
+    }
+
+    #backBtn {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 1px solid rgba(184, 137, 42, 0.45);
+      background: rgba(184, 137, 42, 0.08);
+      color: var(--gold);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    #backBtn.show {
+      display: flex;
+    }
+
+    #topbar h2 {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin: 0;
+    }
+
+    #muteBtn {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 1px solid rgba(184, 137, 42, 0.45);
+      background: rgba(184, 137, 42, 0.08);
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    #content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 6px 20px 30px;
+      scrollbar-width: none;
+    }
+
+    #content::-webkit-scrollbar {
+      display: none;
+    }
+
+    .page {
+      display: none;
+      animation: fadeUp .5s ease;
+    }
+
+    .page.active {
+      display: block;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .card {
+      background: linear-gradient(160deg, rgba(181, 140, 79, 0.10), rgba(245, 237, 216, 0.70));
+      border: 1px solid rgba(181, 140, 79, 0.38);
+      border-radius: var(--radius);
+      padding: 20px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 22px rgba(181, 140, 79, 0.13), inset 0 1px 0 rgba(255, 220, 150, 0.25);
+    }
+
+    .corner-frame {
+      position: relative;
+    }
+
+    .corner-frame::before,
+    .corner-frame::after {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-top: 1.5px solid var(--gold);
+      border-left: 1.5px solid var(--gold);
+      top: 8px;
+      left: 8px;
+    }
+
+    .corner-frame::after {
+      top: auto;
+      left: auto;
+      bottom: 8px;
+      right: 8px;
+      border-top: none;
+      border-left: none;
+      border-bottom: 1.5px solid var(--gold);
+      border-right: 1.5px solid var(--gold);
+    }
+
+    .home-hero {
+      text-align: center;
+      padding: 14px 6px 4px;
+    }
+
+    .home-hero .eyebrow {
+      margin-top: 4px;
+    }
+
+    .home-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 1.15;
+      margin: 6px 0 8px;
+      color: var(--ink);
+    }
+
+    .home-hero .org {
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+
+    .datetime-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .dt-box {
+      flex: 1;
+      text-align: center;
+      padding: 14px 6px;
+      border-radius: 16px;
+      background: rgba(184, 137, 42, 0.08);
+      border: 1px solid rgba(184, 137, 42, 0.30);
+    }
+
+    .dt-box .num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      color: var(--gold);
+      display: block;
+    }
+
+    .dt-box .lbl {
+      font-size: 9.5px;
+      letter-spacing: 1.5px;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    .venue-line {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .venue-line svg {
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .venue-sub {
+      font-size: 11.5px;
+      color: var(--muted);
+      margin: 2px 0 16px 26px;
+    }
+
+    .countdown-title {
+      text-align: center;
+      font-size: 10.5px;
+      letter-spacing: 2.5px;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .cd-unit {
+      text-align: center;
+      width: 58px;
+      padding: 10px 0;
+      border-radius: 14px;
+      background: linear-gradient(160deg, rgba(184, 137, 42, 0.14), rgba(184, 137, 42, 0.04));
+      border: 1px solid rgba(184, 137, 42, 0.35);
+    }
+
+    .cd-unit .val {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      color: var(--gold);
+    }
+
+    .cd-unit .u {
+      display: block;
+      font-size: 8.5px;
+      letter-spacing: 1.5px;
+      color: var(--muted);
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .map-btns {
+      display: flex;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .map-btn {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 8px;
+      border-radius: 100px;
+      font-size: 11.5px;
+      font-weight: 600;
+      letter-spacing: .5px;
+      text-decoration: none;
+      border: 1px solid rgba(184, 137, 42, 0.40);
+      color: var(--ink);
+      background: rgba(184, 137, 42, 0.07);
+    }
+
+    .map-btn.waze {
+      color: #fff;
+      background: linear-gradient(135deg, #4fb8c9, #2a9db0);
+      border: none;
+    }
+
+    .map-btn svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      color: var(--gold);
+      text-align: center;
+      margin: 6px 0 4px;
+    }
+
+    .section-sub {
+      text-align: center;
+      font-size: 11px;
+      color: var(--muted);
+      margin-bottom: 16px;
+      letter-spacing: .5px;
+    }
+
+    .gallery-strip {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding: 2px 2px 8px;
+      scrollbar-width: none;
+    }
+
+    .gallery-strip::-webkit-scrollbar {
+      display: none;
+    }
+
+    .gallery-strip img {
+      width: 118px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 14px;
+      flex-shrink: 0;
+      border: 1px solid rgba(184, 137, 42, 0.35);
+    }
+
+    .cta-wrap {
+      text-align: center;
+      margin-top: 6px;
+    }
+
+    .btn-outline {
+      display: inline-block;
+      font-size: 11.5px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold-warm);
+      border: 1.5px solid var(--gold-warm);
+      padding: 13px 26px;
+      border-radius: 100px;
+      background: linear-gradient(135deg, rgba(181, 140, 79, 0.12), rgba(181, 140, 79, 0.06));
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(181, 140, 79, 0.18);
+      transition: all .2s ease;
+    }
+
+    .btn-outline:hover {
+      background: linear-gradient(135deg, rgba(181, 140, 79, 0.22), rgba(181, 140, 79, 0.12));
+      box-shadow: 0 6px 20px rgba(181, 140, 79, 0.28);
+      transform: translateY(-1px);
+    }
+
+    /* Tentative timeline */
+    .tl {
+      position: relative;
+      margin-left: 14px;
+      padding-left: 22px;
+      border-left: 1px solid rgba(184, 137, 42, 0.40);
+    }
+
+    .tl-item {
+      position: relative;
+      padding-bottom: 22px;
+    }
+
+    .tl-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .tl-item::before {
+      content: "";
+      position: absolute;
+      left: -27px;
+      top: 2px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 0 3px rgba(184, 137, 42, 0.25);
+    }
+
+    .tl-time {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      color: var(--gold);
+      margin-bottom: 2px;
+    }
+
+    .tl-label {
+      font-size: 12.5px;
+      color: var(--ink);
+    }
+
+    .tl-note {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    /* Menu */
+    .menu-card {
+      background: linear-gradient(160deg, rgba(181, 140, 79, 0.10), rgba(245, 237, 216, 0.72));
+      border-color: rgba(181, 140, 79, 0.38);
+      box-shadow: 0 4px 22px rgba(181, 140, 79, 0.13), inset 0 1px 0 rgba(255, 220, 150, 0.22);
+    }
+
+    .menu-course {
+      margin-bottom: 16px;
+    }
+
+    .menu-course:last-child {
+      margin-bottom: 0;
+    }
+
+    .course-eyebrow {
+      font-size: 9.5px;
+      letter-spacing: 2.5px;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .course-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 19px;
+      color: var(--ink);
+      margin-bottom: 2px;
+    }
+
+    .course-desc {
+      font-size: 11.5px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .menu-hr {
+      border: none;
+      border-top: 1px dashed rgba(184, 137, 42, 0.30);
+      margin: 14px 0;
+    }
+
+    /* RSVP */
+    .field {
+      margin-bottom: 14px;
+    }
+
+    .field label {
+      display: block;
+      font-size: 10.5px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(181, 140, 79, 0.38);
+      background: rgba(181, 140, 79, 0.07);
+      color: var(--ink);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      transition: border-color .2s, box-shadow .2s;
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      outline: none;
+      border-color: var(--gold-warm);
+      box-shadow: 0 0 0 3px rgba(181, 140, 79, 0.15);
+    }
+
+    .field textarea {
+      resize: none;
+      height: 70px;
+    }
+
+    .radio-row {
+      display: flex;
+      gap: 10px;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .radio-opt {
+      flex: 1;
+      text-align: center;
+      padding: 12px 0;
+      border-radius: 12px;
+      border: 1px solid rgba(181, 140, 79, 0.38);
+      cursor: pointer;
+      font-size: 12.5px;
+      color: var(--ink);
+      background: linear-gradient(135deg, rgba(181, 140, 79, 0.12), rgba(181, 140, 79, 0.06));
+      transition: all .2s ease;
+    }
+
+    .radio-opt:hover {
+      background: linear-gradient(135deg, rgba(181, 140, 79, 0.22), rgba(181, 140, 79, 0.10));
+      border-color: rgba(181, 140, 79, 0.55);
+    }
+
+    .radio-opt.selected {
+      background: linear-gradient(135deg, var(--gold-warm-2), var(--gold-warm));
+      color: #fff;
+      font-weight: 600;
+      border-color: transparent;
+      box-shadow: 0 4px 14px rgba(181, 140, 79, 0.35);
+    }
+
+    #rsvpForm .btn-gold {
+      width: 100%;
+      margin-top: 6px;
+    }
+
+    #rsvpThanks {
+      display: none;
+      text-align: center;
+      padding: 30px 10px;
+    }
+
+    #rsvpThanks.show {
+      display: block;
+    }
+
+    #rsvpThanks .mask-icon {
+      width: 80px;
+      height: 80px;
+    }
+
+    /* Footer nav */
+    #footer {
+      display: flex;
+      flex-shrink: 0;
+      border-top: 1px solid rgba(181, 140, 79, 0.30);
+      background: linear-gradient(180deg, rgba(245, 237, 216, 0.94), rgba(240, 228, 196, 0.97));
+      backdrop-filter: blur(8px);
+      box-shadow: 0 -2px 12px rgba(181, 140, 79, 0.10);
+    }
+
+    .nav-btn {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      padding: 12px 0 16px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--muted);
+    }
+
+    .nav-btn svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--muted);
+      transition: stroke .2s;
+    }
+
+    .nav-btn span {
+      font-size: 9.5px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .nav-btn.active {
+      color: var(--gold);
+    }
+
+    .nav-btn.active svg {
+      stroke: var(--gold);
+    }
+
+    #ytframe {
+      position: fixed;
+      width: 2px;
+      height: 2px;
+      bottom: 0;
+      right: 0;
+      border: 0;
+      opacity: 0.01;
+      pointer-events: none;
+    }
+
+    /* ---------- DRESS CODE CARDS ---------- */
+    .dress-scroll {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      padding: 4px 2px 10px;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .dress-scroll::-webkit-scrollbar {
+      display: none;
+    }
+
+    .dress-card {
+      flex-shrink: 0;
+      width: 150px;
+      background: linear-gradient(160deg, rgba(181, 140, 79, 0.10), rgba(245, 237, 216, 0.75));
+      border: 1px solid rgba(181, 140, 79, 0.38);
+      border-radius: 18px;
+      padding: 0 0 16px;
+      overflow: hidden;
+      box-shadow: 0 3px 16px rgba(181, 140, 79, 0.14), inset 0 1px 0 rgba(255, 220, 150, 0.20);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .dress-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(181, 140, 79, 0.22);
+    }
+
+    .dress-icon-wrap {
+      width: 100%;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid rgba(184, 137, 42, 0.22);
+      margin-bottom: 10px;
+    }
+
+    .dress-cat {
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin: 0 0 3px;
+      text-align: center;
+    }
+
+    .dress-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 14px;
+      color: var(--ink);
+      margin: 0 0 8px;
+      text-align: center;
+      padding: 0 8px;
+      line-height: 1.2;
+    }
+
+    .dress-tips {
+      list-style: none;
+      margin: 0;
+      padding: 0 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .dress-tips li {
+      font-size: 10.5px;
+      color: var(--muted);
+      line-height: 1.4;
+      padding-left: 8px;
+      position: relative;
+    }
+
+    .dress-tips li:not(:has(❌))::before {
+      content: "·";
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="bokeh">
-  <span style="width:6px;height:6px;top:12%;left:15%;animation-delay:0s;"></span>
-  <span style="width:4px;height:4px;top:30%;left:80%;animation-delay:2s;"></span>
-  <span style="width:8px;height:8px;top:60%;left:10%;animation-delay:4s;"></span>
-  <span style="width:5px;height:5px;top:75%;left:70%;animation-delay:1s;"></span>
-  <span style="width:3px;height:3px;top:45%;left:50%;animation-delay:3s;"></span>
-</div>
-
-<div class="phone">
-  <div class="notch"></div>
-
-  <!-- ================= SPLASH ================= -->
-  <div id="splash">
-    <p class="eyebrow">Anda Dijemput Mesra</p>
-    <svg class="mask-icon" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M10 60 C10 20 55 8 100 8 C145 8 190 20 190 60 C190 85 165 70 150 78 C135 86 130 100 115 95 C105 92 108 78 100 78 C92 78 95 92 85 95 C70 100 65 86 50 78 C35 70 10 85 10 60 Z" stroke="#c9a544" stroke-width="2.5" fill="rgba(201,165,68,0.08)"/>
-      <circle cx="60" cy="48" r="12" stroke="#c9a544" stroke-width="2"/>
-      <circle cx="140" cy="48" r="12" stroke="#c9a544" stroke-width="2"/>
-      <path d="M100 10 L100 -6 M100 -6 L94 2 M100 -6 L106 2" stroke="#c9a544" stroke-width="2" stroke-linecap="round" transform="translate(0,10)"/>
-      <path d="M20 55 Q5 45 15 30" stroke="#c9a544" stroke-width="2" stroke-linecap="round"/>
-      <path d="M180 55 Q195 45 185 30" stroke="#c9a544" stroke-width="2" stroke-linecap="round"/>
-    </svg>
-    <h1 class="display-title">Malam Gala<br><em>Bertopeng</em></h1>
-    <p class="splash-sub">Sila ketik untuk membuka jemputan<br>serta muzik latar majlis</p>
-    <button class="btn-gold" id="enterBtn">Buka Jemputan</button>
-    <button class="btn-install" id="installBtn" style="display:none;">📲 Pasang Aplikasi</button>
+  <div class="bokeh">
+    <span style="width:6px;height:6px;top:12%;left:15%;animation-delay:0s;"></span>
+    <span style="width:4px;height:4px;top:30%;left:80%;animation-delay:2s;"></span>
+    <span style="width:8px;height:8px;top:60%;left:10%;animation-delay:4s;"></span>
+    <span style="width:5px;height:5px;top:75%;left:70%;animation-delay:1s;"></span>
+    <span style="width:3px;height:3px;top:45%;left:50%;animation-delay:3s;"></span>
   </div>
 
-  <!-- ================= APP ================= -->
-  <div class="app">
-    <div id="topbar">
-      <button id="backBtn" aria-label="Kembali">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-      </button>
-      <h2 id="pageTitle">Jemputan</h2>
-      <button id="muteBtn" aria-label="Muzik">
-        <svg id="muteIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 010 7"/><path d="M18.5 5.5a9 9 0 010 13"/>
-        </svg>
-      </button>
+  <div class="phone">
+    <div class="notch"></div>
+
+    <!-- ================= SPLASH ================= -->
+    <div id="splash">
+      <p class="eyebrow">Anda Dijemput Mesra</p>
+      <svg class="mask-icon" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M10 60 C10 20 55 8 100 8 C145 8 190 20 190 60 C190 85 165 70 150 78 C135 86 130 100 115 95 C105 92 108 78 100 78 C92 78 95 92 85 95 C70 100 65 86 50 78 C35 70 10 85 10 60 Z"
+          stroke="#c9a544" stroke-width="2.5" fill="rgba(201,165,68,0.08)" />
+        <circle cx="60" cy="48" r="12" stroke="#c9a544" stroke-width="2" />
+        <circle cx="140" cy="48" r="12" stroke="#c9a544" stroke-width="2" />
+        <path d="M100 10 L100 -6 M100 -6 L94 2 M100 -6 L106 2" stroke="#c9a544" stroke-width="2" stroke-linecap="round"
+          transform="translate(0,10)" />
+        <path d="M20 55 Q5 45 15 30" stroke="#c9a544" stroke-width="2" stroke-linecap="round" />
+        <path d="M180 55 Q195 45 185 30" stroke="#c9a544" stroke-width="2" stroke-linecap="round" />
+      </svg>
+      <h1 class="display-title">Masquerade <br><em>In Garden</em></h1>
+      <p class="splash-sub">Sila ketik untuk membuka jemputan<br>serta muzik latar majlis</p>
+      <button class="btn-gold" id="enterBtn">Buka Jemputan</button>
+      <button class="btn-install" id="installBtn" style="display:none;"> Pasang Aplikasi</button>
     </div>
 
-    <div id="content">
 
-      <!-- ---------- HOME ---------- -->
-      <section class="page active" id="page-home">
-        <div class="home-hero">
-          <p class="eyebrow">Jemputan Rasmi</p>
-          <h1>Malam Gala Bertopeng</h1>
-          <p class="org">Sempena Penutup Latihan Berterusan SKN 183</p>
-        </div>
+    <!-- ================= APP ================= -->
+    <div class="app">
+      <div id="topbar">
+        <button id="backBtn" aria-label="Kembali">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </button>
+        <h2 id="pageTitle">Jemputan</h2>
+        <button id="muteBtn" aria-label="Muzik">
+          <svg id="muteIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M11 5L6 9H2v6h4l5 4V5z" />
+            <path d="M15.5 8.5a5 5 0 010 7" />
+            <path d="M18.5 5.5a9 9 0 010 13" />
+          </svg>
+        </button>
+      </div>
 
-        <div class="card corner-frame">
-          <div class="datetime-row">
-            <div class="dt-box"><span class="num">29</span><span class="lbl">Julai</span></div>
-            <div class="dt-box"><span class="num">2026</span><span class="lbl">Rabu</span></div>
-            <div class="dt-box"><span class="num">8:00</span><span class="lbl">Malam</span></div>
+      <div id="content">
+
+        <!-- ---------- HOME ---------- -->
+        <section class="page active" id="page-home">
+          <div class="home-hero">
+            <p class="eyebrow">Jemputan Rasmi</p>
+            <h1>Masquerade In Garden</h1>
+            <p class="org">Sempena Majlis Penutup Latihan Berterusan SKN 183</p>
           </div>
-          <div class="venue-line">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#c9a544" stroke-width="2"><path d="M12 22s7-7.58 7-13A7 7 0 105 9c0 5.42 7 13 7 13z"/><circle cx="12" cy="9" r="2.5"/></svg>
-            <span>D'lamar Dia, Kuantan</span>
-          </div>
-          <p class="venue-sub">No A1, Lorong Jaya Gading, Jalan Jaya Gading 1, 26070 Kuantan, Pahang</p>
 
-          <p class="countdown-title">Menghitung Detik</p>
-          <div class="countdown">
-            <div class="cd-unit"><span class="val" id="cd-d">00</span><span class="u">Hari</span></div>
-            <div class="cd-unit"><span class="val" id="cd-h">00</span><span class="u">Jam</span></div>
-            <div class="cd-unit"><span class="val" id="cd-m">00</span><span class="u">Minit</span></div>
-            <div class="cd-unit"><span class="val" id="cd-s">00</span><span class="u">Saat</span></div>
-          </div>
-
-          <div class="map-btns">
-            <a class="map-btn waze" target="_blank" href="https://waze.com/ul?ll=3.7513778,103.2042907&navigate=yes">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="9" cy="10" r="1"/><circle cx="15" cy="10" r="1"/><path d="M8 15c1.5 1.3 6.5 1.3 8 0"/></svg>
-              Waze
-            </a>
-            <a class="map-btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=3.7513778,103.2042907">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-7.58 7-13A7 7 0 105 9c0 5.42 7 13 7 13z"/><circle cx="12" cy="9" r="2.5"/></svg>
-              Google Maps
-            </a>
-          </div>
-        </div>
-
-        <p class="section-title">Cadangan Pemakaian</p>
-        <p class="section-sub">Semasa Majlis Penutup LB SKN 183</p>
-
-        <div class="dress-scroll">
-
-          <!-- Kad 1: Lelaki Formal -->
-          <div class="dress-card">
-            <div class="dress-icon-wrap" style="padding:0;overflow:hidden;">
-              <img src="images/dress/dress_lelaki.png" alt="Pakaian Formal Lelaki" style="width:100%;height:100%;object-fit:cover;object-position:top;">
+          <div class="card corner-frame">
+            <div class="datetime-row">
+              <div class="dt-box"><span class="num">29</span><span class="lbl">Julai</span></div>
+              <div class="dt-box"><span class="num">2026</span><span class="lbl">Rabu</span></div>
+              <div class="dt-box"><span class="num">8:00</span><span class="lbl">Malam</span></div>
             </div>
-            <p class="dress-cat">Lelaki</p>
-            <p class="dress-name">Black Tie Masquerade</p>
-            <ul class="dress-tips">
-              <li>Tuxedo / sut hitam malam</li>
-              <li>Bow tie atau tali leher emas</li>
-              <li>Kemeja putih berlengan panjang</li>
-              <li>Kasut Oxford hitam berkilat</li>
-              <li>Topeng sebagai aksesori</li>
-            </ul>
-          </div>
-
-          <!-- Kad 2: Wanita Formal -->
-          <div class="dress-card">
-            <div class="dress-icon-wrap" style="padding:0;overflow:hidden;">
-              <img src="images/dress/dress_wanita.png" alt="Pakaian Formal Wanita" style="width:100%;height:100%;object-fit:cover;object-position:top;">
+            <div class="venue-line">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#c9a544" stroke-width="2">
+                <path d="M12 22s7-7.58 7-13A7 7 0 105 9c0 5.42 7 13 7 13z" />
+                <circle cx="12" cy="9" r="2.5" />
+              </svg>
+              <span>D'lamar Dia, Kuantan</span>
             </div>
-            <p class="dress-cat">Wanita</p>
-            <p class="dress-name">Glamour Gala Night</p>
-            <ul class="dress-tips">
-              <li>Gaun malam panjang penuh</li>
-              <li>Warna gelap berkilauan</li>
-              <li>Barang kemas emas / berlian</li>
-              <li>Kasut tumit tinggi elegan</li>
-              <li>Clutch bag mewah</li>
-            </ul>
-          </div>
+            <p class="venue-sub">No A1, Lorong Jaya Gading, Jalan Jaya Gading 1, 26070 Kuantan, Pahang</p>
 
-          <!-- Kad 3: Palet Warna -->
-          <div class="dress-card">
-            <div class="dress-icon-wrap" style="padding:0;overflow:hidden;">
-              <img src="images/dress/dress_warna.png" alt="Palet Warna" style="width:100%;height:100%;object-fit:cover;">
+            <p class="countdown-title">Menghitung Detik</p>
+            <div class="countdown">
+              <div class="cd-unit"><span class="val" id="cd-d">00</span><span class="u">Hari</span></div>
+              <div class="cd-unit"><span class="val" id="cd-h">00</span><span class="u">Jam</span></div>
+              <div class="cd-unit"><span class="val" id="cd-m">00</span><span class="u">Minit</span></div>
+              <div class="cd-unit"><span class="val" id="cd-s">00</span><span class="u">Saat</span></div>
             </div>
-            <p class="dress-cat">Palet Warna</p>
-            <p class="dress-name">Warna Bertopeng</p>
-            <ul class="dress-tips">
-              <li>Hitam Misteri</li>
-              <li>Burgundy Berdarah</li>
-              <li>Biru Tengah Malam</li>
-              <li>Zamrud Mahkota</li>
-              <li>Ungu &amp; Emas Diraja</li>
-            </ul>
-          </div>
 
-          <!-- Kad 4: Larangan -->
-          <div class="dress-card">
-            <div class="dress-icon-wrap" style="padding:0;overflow:hidden;position:relative;">
-              <img src="images/dress/dress_elak.png" alt="Pakaian Tidak Digalakkan" style="width:100%;height:100%;object-fit:cover;filter:grayscale(30%) brightness(0.7);">
-              <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
-                <svg viewBox="0 0 60 60" width="56" height="56" fill="none">
-                  <circle cx="30" cy="30" r="28" stroke="#c9594a" stroke-width="3" opacity="0.9"/>
-                  <line x1="10" y1="10" x2="50" y2="50" stroke="#c9594a" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+            <div class="map-btns">
+              <a class="map-btn waze" target="_blank" href="https://waze.com/ul?ll=3.7513778,103.2042907&navigate=yes">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="9" />
+                  <circle cx="9" cy="10" r="1" />
+                  <circle cx="15" cy="10" r="1" />
+                  <path d="M8 15c1.5 1.3 6.5 1.3 8 0" />
                 </svg>
+                Waze
+              </a>
+              <a class="map-btn" target="_blank"
+                href="https://www.google.com/maps/search/?api=1&query=3.7513778,103.2042907">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s7-7.58 7-13A7 7 0 105 9c0 5.42 7 13 7 13z" />
+                  <circle cx="12" cy="9" r="2.5" />
+                </svg>
+                Google Maps
+              </a>
+            </div>
+          </div>
+
+          <p class="section-title">Cadangan Pemakaian</p>
+          <p class="section-sub">Semasa Majlis Penutup LB SKN 183</p>
+
+          <div class="dress-scroll">
+
+            <!-- Kad 1: Lelaki Formal -->
+            <div class="dress-card">
+              <div class="dress-icon-wrap" style="padding:0;overflow:hidden;">
+                <img src="images/dress/dress_lelaki.png" alt="Pakaian Formal Lelaki"
+                  style="width:100%;height:100%;object-fit:cover;object-position:top;">
+              </div>
+              <p class="dress-cat">Lelaki</p>
+              <p class="dress-name">Black Tie Masquerade</p>
+              <ul class="dress-tips">
+                <li>Tuxedo / sut hitam malam</li>
+                <li>Bow tie atau tali leher emas</li>
+                <li>Kemeja putih berlengan panjang</li>
+                <li>Kasut Oxford hitam berkilat</li>
+                <li>Topeng sebagai aksesori</li>
+              </ul>
+            </div>
+
+            <!-- Kad 2: Wanita Formal -->
+            <div class="dress-card">
+              <div class="dress-icon-wrap" style="padding:0;overflow:hidden;">
+                <img src="images/dress/dress_wanita.png" alt="Pakaian Formal Wanita"
+                  style="width:100%;height:100%;object-fit:cover;object-position:top;">
+              </div>
+              <p class="dress-cat">Wanita</p>
+              <p class="dress-name">Glamour Gala Night</p>
+              <ul class="dress-tips">
+                <li>Gaun malam panjang penuh</li>
+                <li>Warna gelap berkilauan</li>
+                <li>Barang kemas emas / berlian</li>
+                <li>Kasut tumit tinggi elegan</li>
+                <li>Clutch bag mewah</li>
+              </ul>
+            </div>
+
+            <!-- Kad 3: Palet Warna -->
+            <div class="dress-card">
+              <div class="dress-icon-wrap" style="padding:0;overflow:hidden;">
+                <img src="images/dress/dress_warna.png" alt="Palet Warna"
+                  style="width:100%;height:100%;object-fit:cover;">
+              </div>
+              <p class="dress-cat">Palet Warna</p>
+              <p class="dress-name">Warna Bertopeng</p>
+              <ul class="dress-tips">
+                <li>Hitam Misteri</li>
+                <li>Burgundy Berdarah</li>
+                <li>Biru Tengah Malam</li>
+                <li>Zamrud Mahkota</li>
+                <li>Ungu &amp; Emas Diraja</li>
+              </ul>
+            </div>
+
+            <!-- Kad 4: Larangan -->
+            <div class="dress-card">
+              <div class="dress-icon-wrap" style="padding:0;overflow:hidden;position:relative;">
+                <img src="images/dress/dress_elak.png" alt="Pakaian Tidak Digalakkan"
+                  style="width:100%;height:100%;object-fit:cover;filter:grayscale(30%) brightness(0.7);">
+                <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
+                  <svg viewBox="0 0 60 60" width="56" height="56" fill="none">
+                    <circle cx="30" cy="30" r="28" stroke="#c9594a" stroke-width="3" opacity="0.9" />
+                    <line x1="10" y1="10" x2="50" y2="50" stroke="#c9594a" stroke-width="3" stroke-linecap="round"
+                      opacity="0.9" />
+                  </svg>
+                </div>
+              </div>
+              <p class="dress-cat" style="color:#c9594a;">Elakkan</p>
+              <p class="dress-name">Pemakaian Yang Kurang Sesuai</p>
+              <ul class="dress-tips">
+                <li>❌ T-shirt &amp; seluar jeans</li>
+                <li>❌ Selipar atau sandal</li>
+                <li>❌ Baju sukan </li>
+                <li>❌ Pakaian tidak sopan</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="cta-wrap">
+            <button class="btn-outline" id="goRsvp">Sahkan Kehadiran</button>
+          </div>
+        </section>
+
+        <!-- ---------- TENTATIVE ---------- -->
+        <section class="page" id="page-tentative">
+          <p class="section-title">Atur Cara Majlis</p>
+          <p class="section-sub">Rabu, 29 Julai 2026</p>
+          <div class="card">
+            <div class="tl">
+              <div class="tl-item">
+                <p class="tl-time">7:30</p>
+                <p class="tl-label">Ketibaan tetamu &amp; sesi bergambar bertopeng</p>
+              </div>
+              <div class="tl-item">
+                <p class="tl-time">8:00</p>
+                <p class="tl-label">Perasmian majlis oleh pengacara</p>
+              </div>
+              <div class="tl-item">
+                <p class="tl-time">8:15</p>
+                <p class="tl-label">Ucapan alu-aluan Yang DiPertua Kelab</p>
+              </div>
+              <div class="tl-item">
+                <p class="tl-time">8:30</p>
+                <p class="tl-label">Santapan malam gala disajikan</p>
+                <p class="tl-note">Rujuk menu penuh di tab Menu</p>
+              </div>
+              <div class="tl-item">
+                <p class="tl-time">9:15</p>
+                <p class="tl-label">Persembahan kebudayaan &amp; muzik hidup</p>
+              </div>
+              <div class="tl-item">
+                <p class="tl-time">9:45</p>
+                <p class="tl-label">Sesi menari &amp; hiburan bebas</p>
+              </div>
+              <div class="tl-item">
+                <p class="tl-time">10:45</p>
+                <p class="tl-label">Cabutan bertuah &amp; penutup rasmi</p>
+              </div>
+              <div class="tl-item">
+                <p class="tl-time">11:00</p>
+                <p class="tl-label">Majlis bersurai</p>
               </div>
             </div>
-            <p class="dress-cat" style="color:#c9594a;">Elakkan</p>
-            <p class="dress-name">Pemakaian Yang Kurang Sesuai</p>
-            <ul class="dress-tips">
-              <li>❌ T-shirt &amp; seluar jeans</li>
-              <li>❌ Selipar atau sandal</li>
-              <li>❌ Baju sukan </li>
-              <li>❌ Pakaian tidak sopan</li>
-            </ul>
           </div>
+        </section>
 
-        </div>
+        <!-- ---------- MENU ---------- -->
+        <section class="page" id="page-menu">
+          <p class="section-title">Menu Santapan</p>
+          <p class="section-sub">Majlis Penutup Latihan Berterusan SKN 183</p>
+          <div class="card menu-card corner-frame">
 
-        <div class="cta-wrap">
-          <button class="btn-outline" id="goRsvp">Sahkan Kehadiran</button>
-        </div>
-      </section>
+            <div class="menu-course">
+              <p class="course-eyebrow">Hidangan Utama</p>
+              <p class="course-name">Nasi Minyak</p>
+              <p class="course-desc">Nasi minyak yang harum, dihidangkan bersama ayam merah yang dimasak dengan rempah istimewa serta sayur campur segar.</p>
+            </div>
 
-      <!-- ---------- TENTATIVE ---------- -->
-      <section class="page" id="page-tentative">
-        <p class="section-title">Atur Cara Majlis</p>
-        <p class="section-sub">Rabu, 29 Julai 2026</p>
-        <div class="card">
-          <div class="tl">
-            <div class="tl-item">
-              <p class="tl-time">7:30</p>
-              <p class="tl-label">Ketibaan tetamu &amp; sesi bergambar bertopeng</p>
-            </div>
-            <div class="tl-item">
-              <p class="tl-time">8:00</p>
-              <p class="tl-label">Perasmian majlis oleh pengacara</p>
-            </div>
-            <div class="tl-item">
-              <p class="tl-time">8:15</p>
-              <p class="tl-label">Ucapan alu-aluan Yang DiPertua Kelab</p>
-            </div>
-            <div class="tl-item">
-              <p class="tl-time">8:30</p>
-              <p class="tl-label">Santapan malam gala disajikan</p>
-              <p class="tl-note">Rujuk menu penuh di tab Menu</p>
-            </div>
-            <div class="tl-item">
-              <p class="tl-time">9:15</p>
-              <p class="tl-label">Persembahan kebudayaan &amp; muzik hidup</p>
-            </div>
-            <div class="tl-item">
-              <p class="tl-time">9:45</p>
-              <p class="tl-label">Sesi menari &amp; hiburan bebas</p>
-            </div>
-            <div class="tl-item">
-              <p class="tl-time">10:45</p>
-              <p class="tl-label">Cabutan bertuah &amp; penutup rasmi</p>
-            </div>
-            <div class="tl-item">
-              <p class="tl-time">11:00</p>
-              <p class="tl-label">Majlis bersurai</p>
-            </div>
-          </div>
-        </div>
-      </section>
+            <hr class="menu-hr">
 
-      <!-- ---------- MENU ---------- -->
-      <section class="page" id="page-menu">
-        <p class="section-title">Menu Santapan</p>
-        <p class="section-sub">Empat hidangan bergaya fine dining</p>
-        <div class="card menu-card corner-frame">
-          <div class="menu-course">
-            <p class="course-eyebrow">Amuse-Bouche</p>
-            <p class="course-name">Beluga Lentil Tartlet</p>
-            <p class="course-desc">Kerak nipis diisi lentil beluga, krim keju herba &amp; kaviar sayur.</p>
-          </div>
-          <hr class="menu-hr">
-          <div class="menu-course">
-            <p class="course-eyebrow">Pembuka Selera</p>
-            <p class="course-name">Sup Krim Cendawan Truffle</p>
-            <p class="course-desc">Sup sutera cendawan liar dengan sentuhan minyak truffle hitam.</p>
-          </div>
-          <hr class="menu-hr">
-          <div class="menu-course">
-            <p class="course-eyebrow">Hidangan Utama · Pilih Satu</p>
-            <p class="course-name">Beef Wellington</p>
-            <p class="course-desc">Daging tenderloin dibalut mushroom duxelles &amp; pastri rangup, sos red wine jus.</p>
-            <p class="course-name" style="margin-top:10px;">Chicken Ballotine Saffron</p>
-            <p class="course-desc">Ayam gulung isi bayam &amp; feta, sos saffron krim, sayuran musim.</p>
-          </div>
-          <hr class="menu-hr">
-          <div class="menu-course">
-            <p class="course-eyebrow">Pencuci Mulut</p>
-            <p class="course-name">Golden Opera Cake</p>
-            <p class="course-desc">Lapisan span almond, ganache coklat &amp; kopi, sapuan daun emas.</p>
-          </div>
-          <hr class="menu-hr">
-          <div class="menu-course">
-            <p class="course-eyebrow">Minuman</p>
-            <p class="course-name">Mocktail "Venetian Rose"</p>
-            <p class="course-desc">Sirap ros, limau nipis &amp; soda, dihias kelopak bunga boleh dimakan.</p>
-          </div>
-        </div>
-      </section>
+            <div class="menu-course">
+              <p class="course-eyebrow">Snek</p>
+              <p class="course-name">Popia Rangup</p>
+              <p class="course-desc">Popia goreng yang rangup, disertakan dengan pilihan sos manis atau sos pedas.</p>
+            </div>
 
-      <!-- ---------- RSVP ---------- -->
-      <section class="page" id="page-rsvp">
-        <p class="section-title">Sahkan Kehadiran</p>
-        <p class="section-sub">Mohon balas sebelum 28 Julai 2026</p>
-        <div class="card" id="rsvpForm">
-          <div class="field">
-            <label>Kategori</label>
-            <div class="radio-row category-grid">
-              <div class="radio-opt selected" data-cat="kadet">Kadet</div>
-              <div class="radio-opt" data-cat="jurulatih">Jurulatih</div>
-              <div class="radio-opt" data-cat="pegawai_muda">Pegawai Muda</div>
-              <div class="radio-opt" data-cat="vip">VIP</div>
+            <hr class="menu-hr">
+
+            <div class="menu-course">
+              <p class="course-eyebrow">Pencuci Mulut</p>
+              <p class="course-name">Cendol</p>
+              <p class="course-desc">Cendol tradisional dengan santan pekat, sirap gula Melaka dan ais kisar yang menyegarkan.</p>
             </div>
-          </div>
-          <div class="field" id="nameTextField">
-            <label>Nama Penuh Kadet</label>
-            <input type="text" id="rName" placeholder="Nama kadet">
-          </div>
-          <div class="field" id="nameSelectField" style="display:none;">
-            <label id="nameSelectLabel">Pilih Nama</label>
-            <select id="rNameSelect"></select>
-          </div>
-          <div class="field">
-            <label>Kehadiran</label>
-            <div class="radio-row">
-              <div class="radio-opt selected" data-val="ya">Hadir</div>
-              <div class="radio-opt" data-val="tidak">Tidak Hadir</div>
+
+            <hr class="menu-hr">
+
+            <div class="menu-course">
+              <p class="course-eyebrow">Minuman</p>
+              <p class="course-name">Pilihan Minuman</p>
+              <p class="course-desc">Cordial Anggur &amp; Teh Panas.</p>
             </div>
+
           </div>
-          <button class="btn-gold" id="submitRsvp">Hantar Pengesahan</button>
-        </div>
-        <div id="rsvpThanks">
-          <svg class="mask-icon" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M10 60 C10 20 55 8 100 8 C145 8 190 20 190 60 C190 85 165 70 150 78 C135 86 130 100 115 95 C105 92 108 78 100 78 C92 78 95 92 85 95 C70 100 65 86 50 78 C35 70 10 85 10 60 Z" stroke="#c9a544" stroke-width="2.5" fill="rgba(201,165,68,0.08)"/>
-            <circle cx="60" cy="48" r="10" stroke="#c9a544" stroke-width="2"/>
-            <circle cx="140" cy="48" r="10" stroke="#c9a544" stroke-width="2"/>
+        </section>
+
+
+        <!-- ---------- RSVP ---------- -->
+        <section class="page" id="page-rsvp">
+          <p class="section-title">Sahkan Kehadiran</p>
+          <p class="section-sub">Mohon balas sebelum 28 Julai 2026</p>
+          <div class="card" id="rsvpForm">
+            <div class="field">
+              <label>Kategori</label>
+              <div class="radio-row category-grid">
+                <div class="radio-opt selected" data-cat="kadet">Kadet</div>
+                <div class="radio-opt" data-cat="jurulatih">Jurulatih</div>
+                <div class="radio-opt" data-cat="pegawai_muda">Pegawai Muda</div>
+                <div class="radio-opt" data-cat="vip">VIP</div>
+              </div>
+            </div>
+            <div class="field" id="nameTextField">
+              <label>Nama Penuh Kadet</label>
+              <input type="text" id="rName" placeholder="Nama kadet">
+            </div>
+            <div class="field" id="nameSelectField" style="display:none;">
+              <label id="nameSelectLabel">Pilih Nama</label>
+              <select id="rNameSelect"></select>
+            </div>
+            <div class="field">
+              <label>Kehadiran</label>
+              <div class="radio-row">
+                <div class="radio-opt selected" data-val="ya">Hadir</div>
+                <div class="radio-opt" data-val="tidak">Tidak Hadir</div>
+              </div>
+            </div>
+            <button class="btn-gold" id="submitRsvp">Hantar Pengesahan</button>
+          </div>
+          <div id="rsvpThanks">
+            <svg class="mask-icon" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M10 60 C10 20 55 8 100 8 C145 8 190 20 190 60 C190 85 165 70 150 78 C135 86 130 100 115 95 C105 92 108 78 100 78 C92 78 95 92 85 95 C70 100 65 86 50 78 C35 70 10 85 10 60 Z"
+                stroke="#c9a544" stroke-width="2.5" fill="rgba(201,165,68,0.08)" />
+              <circle cx="60" cy="48" r="10" stroke="#c9a544" stroke-width="2" />
+              <circle cx="140" cy="48" r="10" stroke="#c9a544" stroke-width="2" />
+            </svg>
+            <p class="section-title" style="margin-top:6px;">Terima Kasih</p>
+            <p class="section-sub" id="thanksMsg">Pengesahan anda telah diterima.</p>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- ---------- FOOTER NAV ---------- -->
+      <nav id="footer">
+        <button class="nav-btn active" data-page="home">
+          <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 11l9-7 9 7" />
+            <path d="M5 10v10h14V10" />
           </svg>
-          <p class="section-title" style="margin-top:6px;">Terima Kasih</p>
-          <p class="section-sub" id="thanksMsg">Pengesahan anda telah diterima.</p>
-        </div>
-      </section>
-
+          <span>Utama</span>
+        </button>
+        <button class="nav-btn" data-page="tentative">
+          <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="5" width="18" height="16" rx="2" />
+            <path d="M3 10h18" />
+            <path d="M8 3v4M16 3v4" />
+          </svg>
+          <span>Tentatif</span>
+        </button>
+        <button class="nav-btn" data-page="menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 3v7a3 3 0 006 0V3M9 10v11" />
+            <path d="M17 3c-1.5 0-2.5 1.5-2.5 4s1 4 2.5 5v9" />
+          </svg>
+          <span>Menu</span>
+        </button>
+        <button class="nav-btn" data-page="rsvp">
+          <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9" />
+            <path d="M8 12l3 3 5-5" />
+          </svg>
+          <span>RSVP</span>
+        </button>
+      </nav>
     </div>
-
-    <!-- ---------- FOOTER NAV ---------- -->
-    <nav id="footer">
-      <button class="nav-btn active" data-page="home">
-        <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg>
-        <span>Utama</span>
-      </button>
-      <button class="nav-btn" data-page="tentative">
-        <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18"/><path d="M8 3v4M16 3v4"/></svg>
-        <span>Tentatif</span>
-      </button>
-      <button class="nav-btn" data-page="menu">
-        <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v7a3 3 0 006 0V3M9 10v11"/><path d="M17 3c-1.5 0-2.5 1.5-2.5 4s1 4 2.5 5v9"/></svg>
-        <span>Menu</span>
-      </button>
-      <button class="nav-btn" data-page="rsvp">
-        <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-5"/></svg>
-        <span>RSVP</span>
-      </button>
-    </nav>
   </div>
-</div>
 
-<!-- Hidden YouTube player. Ganti VIDEO_ID dengan ID lagu YouTube pilihan anda -->
-<iframe id="ytframe" src="" allow="autoplay" title="muzik latar"></iframe>
+  <!-- Hidden YouTube player. Ganti VIDEO_ID dengan ID lagu YouTube pilihan anda -->
+  <iframe id="ytframe" src="" allow="autoplay" title="muzik latar"></iframe>
 
-<script>
-  /* ============ TETAPAN BOLEH UBAH ============ */
-  const EVENT_DATE = new Date("2026-07-29T20:00:00+08:00"); // tarikh & masa majlis
-  const YOUTUBE_VIDEO_ID = "f-PRMB1SsHM"; // GANTI dengan ID video YouTube (bahagian selepas v= dalam URL)
-  const YOUTUBE_START_SECONDS = 36; // video akan mula main dari saat ke-36
-  const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzRiI4rchQllg5oE7gCd9aSVBy4jKMv6LioAPIfkqdwlFCLX1jgcwXKa9FVYknAE9g6QQ/exec"; // URL Web App Apps Script (sudah deploy)
-  const JURULATIH_LIST = ["Jurulatih 1", "Jurulatih 2", "Jurulatih 3", "Jurulatih 4", "Jurulatih 5"]; // GANTI dengan nama sebenar 5 jurulatih
-  const VIP_LIST = ["Pegawai Memerintah"]; // GANTI dengan nama sebenar (boleh tambah lebih dari satu jika perlu)
-  /* ============================================= */
+  <script>
+    /* ============ TETAPAN BOLEH UBAH ============ */
+    const EVENT_DATE = new Date("2026-07-29T20:00:00+08:00"); // tarikh & masa majlis
+    const YOUTUBE_VIDEO_ID = "f-PRMB1SsHM"; // GANTI dengan ID video YouTube (bahagian selepas v= dalam URL)
+    const YOUTUBE_START_SECONDS = 36; // video akan mula main dari saat ke-36
+    const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzRiI4rchQllg5oE7gCd9aSVBy4jKMv6LioAPIfkqdwlFCLX1jgcwXKa9FVYknAE9g6QQ/exec"; // URL Web App Apps Script (sudah deploy)
+    const JURULATIH_LIST = [
+      "727958 Sjn U Mohamad Aliuddin bin Mohd Saleh",
+      "730371 Kpl U Muhammad Azmie bin Mohd Nawi",
+      "730925 Kpl U Mohamad Nabil Imran bin Hang Tuah",
+      "733589 Kpl U Badrulhisyam bin Azmi",
+      "734563 Kpl U Mohd Akmal bin Mohd Sazali"
+    ];
+    const VIP_LIST = ["Kapt Tuan Mohd Rizqin bin Tuan Ab Aziz TUDM (375735)"];
+    /* ============================================= */
 
-  const ytframe = document.getElementById('ytframe');
-  let musicOn = true;
+    const ytframe = document.getElementById('ytframe');
+    let musicOn = true;
 
-  function ytCommand(func){
-    try{
-      ytframe.contentWindow.postMessage(JSON.stringify({event:'command', func:func, args:[]}), '*');
-    }catch(e){}
-  }
-
-  document.getElementById('enterBtn').addEventListener('click', function(){
-    ytframe.src = `https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&enablejsapi=1&controls=0&loop=1&playlist=${YOUTUBE_VIDEO_ID}&start=${YOUTUBE_START_SECONDS}`;
-    document.getElementById('splash').classList.add('hide');
-  });
-
-  document.getElementById('muteBtn').addEventListener('click', function(){
-    musicOn = !musicOn;
-    ytCommand(musicOn ? 'playVideo' : 'pauseVideo');
-    document.getElementById('muteIcon').style.opacity = musicOn ? '1' : '0.4';
-  });
-
-  /* ---------- PWA: SERVICE WORKER & INSTALL PROMPT ---------- */
-  if('serviceWorker' in navigator){
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('sw.js').catch(() => {});
-    });
-  }
-
-  let deferredInstallPrompt = null;
-  const installBtn = document.getElementById('installBtn');
-
-  window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferredInstallPrompt = e;
-    installBtn.style.display = 'inline-block';
-  });
-
-  installBtn.addEventListener('click', async () => {
-    if(!deferredInstallPrompt) return;
-    deferredInstallPrompt.prompt();
-    await deferredInstallPrompt.userChoice;
-    deferredInstallPrompt = null;
-    installBtn.style.display = 'none';
-  });
-
-  window.addEventListener('appinstalled', () => {
-    installBtn.style.display = 'none';
-  });
-
-  /* ---------- COUNTDOWN ---------- */
-  function updateCountdown(){
-    const now = new Date();
-    let diff = EVENT_DATE - now;
-    if(diff < 0) diff = 0;
-    const d = Math.floor(diff / (1000*60*60*24));
-    const h = Math.floor((diff / (1000*60*60)) % 24);
-    const m = Math.floor((diff / (1000*60)) % 60);
-    const s = Math.floor((diff / 1000) % 60);
-    document.getElementById('cd-d').textContent = String(d).padStart(2,'0');
-    document.getElementById('cd-h').textContent = String(h).padStart(2,'0');
-    document.getElementById('cd-m').textContent = String(m).padStart(2,'0');
-    document.getElementById('cd-s').textContent = String(s).padStart(2,'0');
-  }
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
-
-  /* ---------- NAV / ROUTING ---------- */
-  const pageTitles = {home:'Jemputan', tentative:'Atur Cara', menu:'Menu Santapan', rsvp:'Pengesahan'};
-  const navBtns = document.querySelectorAll('.nav-btn');
-  const backBtn = document.getElementById('backBtn');
-  const pageTitle = document.getElementById('pageTitle');
-
-  function showPage(name){
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.getElementById('page-' + name).classList.add('active');
-    navBtns.forEach(b => b.classList.toggle('active', b.dataset.page === name));
-    pageTitle.textContent = pageTitles[name];
-    backBtn.classList.toggle('show', name !== 'home');
-    document.getElementById('content').scrollTop = 0;
-  }
-
-  navBtns.forEach(btn => btn.addEventListener('click', () => showPage(btn.dataset.page)));
-  backBtn.addEventListener('click', () => showPage('home'));
-  document.getElementById('goRsvp').addEventListener('click', () => showPage('rsvp'));
-
-  /* ---------- RSVP FORM ---------- */
-  const categoryLabels = {
-    kadet: 'Kadet',
-    jurulatih: 'Jurulatih',
-    pegawai_muda: 'Pegawai Muda',
-    vip: 'VIP (Pegawai Memerintah)'
-  };
-  let currentCategory = 'kadet';
-
-  function renderNameField(cat){
-    const textField = document.getElementById('nameTextField');
-    const selectField = document.getElementById('nameSelectField');
-    const textLabel = textField.querySelector('label');
-    const textInput = document.getElementById('rName');
-    const selectLabel = document.getElementById('nameSelectLabel');
-    const select = document.getElementById('rNameSelect');
-
-    if(cat === 'jurulatih' || cat === 'vip'){
-      textField.style.display = 'none';
-      selectField.style.display = 'block';
-      const list = cat === 'jurulatih' ? JURULATIH_LIST : VIP_LIST;
-      selectLabel.textContent = cat === 'jurulatih' ? 'Pilih Nama Jurulatih' : 'Pilih Nama VIP';
-      select.innerHTML = list.map(n => `<option value="${n}">${n}</option>`).join('');
-    } else {
-      selectField.style.display = 'none';
-      textField.style.display = 'block';
-      textLabel.textContent = cat === 'kadet' ? 'Nama Penuh Kadet' : 'Nama Penuh Pegawai Muda';
-      textInput.placeholder = cat === 'kadet' ? 'Nama kadet' : 'Nama pegawai muda';
-    }
-  }
-
-  document.querySelectorAll('.category-grid .radio-opt').forEach(opt => {
-    opt.addEventListener('click', function(){
-      document.querySelectorAll('.category-grid .radio-opt').forEach(o => o.classList.remove('selected'));
-      this.classList.add('selected');
-      currentCategory = this.dataset.cat;
-      renderNameField(currentCategory);
-    });
-  });
-  renderNameField(currentCategory);
-
-  document.querySelectorAll('.radio-row:not(.category-grid) .radio-opt').forEach(opt => {
-    opt.addEventListener('click', function(){
-      this.parentElement.querySelectorAll('.radio-opt').forEach(o => o.classList.remove('selected'));
-      this.classList.add('selected');
-    });
-  });
-
-  document.getElementById('submitRsvp').addEventListener('click', async function(){
-    const isSelectMode = (currentCategory === 'jurulatih' || currentCategory === 'vip');
-    const name = isSelectMode
-      ? document.getElementById('rNameSelect').value
-      : document.getElementById('rName').value.trim();
-    const attending = document.querySelector('#page-rsvp .radio-row:not(.category-grid) .radio-opt.selected').dataset.val;
-
-    if(!isSelectMode && !name){
-      document.getElementById('rName').focus();
-      return;
+    function ytCommand(func) {
+      try {
+        ytframe.contentWindow.postMessage(JSON.stringify({ event: 'command', func: func, args: [] }), '*');
+      } catch (e) { }
     }
 
-    const submitBtn = this;
-    const originalLabel = submitBtn.textContent;
-    submitBtn.textContent = 'Menghantar...';
-    submitBtn.disabled = true;
+    document.getElementById('enterBtn').addEventListener('click', function () {
+      ytframe.src = `https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&enablejsapi=1&controls=0&loop=1&playlist=${YOUTUBE_VIDEO_ID}&start=${YOUTUBE_START_SECONDS}`;
+      document.getElementById('splash').classList.add('hide');
+    });
 
-    try{
-      if(APPS_SCRIPT_URL && APPS_SCRIPT_URL.indexOf('PASTE_URL') === -1){
-        await fetch(APPS_SCRIPT_URL, {
-          method: 'POST',
-          mode: 'no-cors', // Apps Script tak sokong preflight CORS; no-cors cukup untuk hantar data
-          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-          body: JSON.stringify({ category: categoryLabels[currentCategory], name, attending })
-        });
+    document.getElementById('muteBtn').addEventListener('click', function () {
+      musicOn = !musicOn;
+      ytCommand(musicOn ? 'playVideo' : 'pauseVideo');
+      document.getElementById('muteIcon').style.opacity = musicOn ? '1' : '0.4';
+    });
+
+    /* ---------- PWA: SERVICE WORKER & INSTALL PROMPT ---------- */
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js').catch(() => { });
+      });
+    }
+
+    let deferredInstallPrompt = null;
+    const installBtn = document.getElementById('installBtn');
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredInstallPrompt = e;
+      installBtn.style.display = 'inline-block';
+    });
+
+    installBtn.addEventListener('click', async () => {
+      if (!deferredInstallPrompt) return;
+      deferredInstallPrompt.prompt();
+      await deferredInstallPrompt.userChoice;
+      deferredInstallPrompt = null;
+      installBtn.style.display = 'none';
+    });
+
+    window.addEventListener('appinstalled', () => {
+      installBtn.style.display = 'none';
+    });
+
+    /* ---------- COUNTDOWN ---------- */
+    function updateCountdown() {
+      const now = new Date();
+      let diff = EVENT_DATE - now;
+      if (diff < 0) diff = 0;
+      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const m = Math.floor((diff / (1000 * 60)) % 60);
+      const s = Math.floor((diff / 1000) % 60);
+      document.getElementById('cd-d').textContent = String(d).padStart(2, '0');
+      document.getElementById('cd-h').textContent = String(h).padStart(2, '0');
+      document.getElementById('cd-m').textContent = String(m).padStart(2, '0');
+      document.getElementById('cd-s').textContent = String(s).padStart(2, '0');
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    /* ---------- NAV / ROUTING ---------- */
+    const pageTitles = { home: 'Jemputan', tentative: 'Atur Cara', menu: 'Menu Santapan', rsvp: 'Pengesahan' };
+    const navBtns = document.querySelectorAll('.nav-btn');
+    const backBtn = document.getElementById('backBtn');
+    const pageTitle = document.getElementById('pageTitle');
+
+    function showPage(name) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById('page-' + name).classList.add('active');
+      navBtns.forEach(b => b.classList.toggle('active', b.dataset.page === name));
+      pageTitle.textContent = pageTitles[name];
+      backBtn.classList.toggle('show', name !== 'home');
+      document.getElementById('content').scrollTop = 0;
+    }
+
+    navBtns.forEach(btn => btn.addEventListener('click', () => showPage(btn.dataset.page)));
+    backBtn.addEventListener('click', () => showPage('home'));
+    document.getElementById('goRsvp').addEventListener('click', () => showPage('rsvp'));
+
+    /* ---------- RSVP FORM ---------- */
+    const categoryLabels = {
+      kadet: 'Kadet',
+      jurulatih: 'Jurulatih',
+      pegawai_muda: 'Pegawai Muda',
+      vip: 'VIP (Pegawai Memerintah)'
+    };
+    let currentCategory = 'kadet';
+
+    function renderNameField(cat) {
+      const textField = document.getElementById('nameTextField');
+      const selectField = document.getElementById('nameSelectField');
+      const textLabel = textField.querySelector('label');
+      const textInput = document.getElementById('rName');
+      const selectLabel = document.getElementById('nameSelectLabel');
+      const select = document.getElementById('rNameSelect');
+
+      if (cat === 'jurulatih' || cat === 'vip') {
+        textField.style.display = 'none';
+        selectField.style.display = 'block';
+        const list = cat === 'jurulatih' ? JURULATIH_LIST : VIP_LIST;
+        selectLabel.textContent = cat === 'jurulatih' ? 'Pilih Nama Jurulatih' : 'Pilih Nama VIP';
+        select.innerHTML = list.map(n => `<option value="${n}">${n}</option>`).join('');
+      } else {
+        selectField.style.display = 'none';
+        textField.style.display = 'block';
+        textLabel.textContent = cat === 'kadet' ? 'Nama Penuh Kadet' : 'Nama Penuh Pegawai Muda';
+        textInput.placeholder = cat === 'kadet' ? 'Nama kadet' : 'Nama pegawai muda';
       }
-      const msg = attending === 'ya'
-        ? `Terima kasih, ${name}. Kami tidak sabar untuk meraikan Malam Gala Bertopeng bersama anda!`
-        : `Terima kasih kerana memaklumkan, ${name}. Ketidakhadiran anda akan kami rasai pada malam yang istimewa ini.`;
-      document.getElementById('thanksMsg').textContent = msg;
-      document.getElementById('rsvpForm').style.display = 'none';
-      document.getElementById('rsvpThanks').classList.add('show');
-    }catch(err){
-      submitBtn.textContent = originalLabel;
-      submitBtn.disabled = false;
-      alert('Maaf, penghantaran gagal. Sila periksa sambungan internet dan cuba lagi.');
     }
-  });
-</script>
+
+    document.querySelectorAll('.category-grid .radio-opt').forEach(opt => {
+      opt.addEventListener('click', function () {
+        document.querySelectorAll('.category-grid .radio-opt').forEach(o => o.classList.remove('selected'));
+        this.classList.add('selected');
+        currentCategory = this.dataset.cat;
+        renderNameField(currentCategory);
+      });
+    });
+    renderNameField(currentCategory);
+
+    document.querySelectorAll('.radio-row:not(.category-grid) .radio-opt').forEach(opt => {
+      opt.addEventListener('click', function () {
+        this.parentElement.querySelectorAll('.radio-opt').forEach(o => o.classList.remove('selected'));
+        this.classList.add('selected');
+      });
+    });
+
+    document.getElementById('submitRsvp').addEventListener('click', async function () {
+      const isSelectMode = (currentCategory === 'jurulatih' || currentCategory === 'vip');
+      const name = isSelectMode
+        ? document.getElementById('rNameSelect').value
+        : document.getElementById('rName').value.trim();
+      const attending = document.querySelector('#page-rsvp .radio-row:not(.category-grid) .radio-opt.selected').dataset.val;
+
+      if (!isSelectMode && !name) {
+        document.getElementById('rName').focus();
+        return;
+      }
+
+      const submitBtn = this;
+      const originalLabel = submitBtn.textContent;
+      submitBtn.textContent = 'Menghantar...';
+      submitBtn.disabled = true;
+
+      try {
+        if (APPS_SCRIPT_URL && APPS_SCRIPT_URL.indexOf('PASTE_URL') === -1) {
+          await fetch(APPS_SCRIPT_URL, {
+            method: 'POST',
+            mode: 'no-cors', // Apps Script tak sokong preflight CORS; no-cors cukup untuk hantar data
+            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+            body: JSON.stringify({ category: categoryLabels[currentCategory], name, attending })
+          });
+        }
+        const msg = attending === 'ya'
+          ? `Terima kasih, ${name}. Kami tidak sabar untuk meraikan Mesquerade In Garden bersama anda!`
+          : `Terima kasih kerana memaklumkan, ${name}. Ketidakhadiran anda akan kami rasai pada malam yang istimewa ini.`;
+        document.getElementById('thanksMsg').textContent = msg;
+        document.getElementById('rsvpForm').style.display = 'none';
+        document.getElementById('rsvpThanks').classList.add('show');
+      } catch (err) {
+        submitBtn.textContent = originalLabel;
+        submitBtn.disabled = false;
+        alert('Maaf, penghantaran gagal. Sila periksa sambungan internet dan cuba lagi.');
+      }
+    });
+  </script>
 </body>
+
 </html>
