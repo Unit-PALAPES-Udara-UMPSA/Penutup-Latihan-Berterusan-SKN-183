@@ -802,6 +802,33 @@
       line-height: 1.3;
     }
 
+    /* Sub-item bullet list (di bawah tl-label) */
+    .tl-sub {
+      list-style: none;
+      margin: 6px 0 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .tl-sub li {
+      font-size: 11px;
+      color: var(--muted);
+      padding-left: 12px;
+      position: relative;
+      line-height: 1.35;
+    }
+    .tl-sub li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: var(--gold-dim);
+    }
+    .tl-sub li em {
+      font-style: italic;
+      color: var(--ink);
+    }
+
     .tl-scroll-hint {
       display: flex;
       align-items: center;
@@ -1355,350 +1382,73 @@
           <p class="section-sub">Majlis Penutup Latihan Berterusan SKN 183 Tahun 2026</p>
           <div class="card" style="padding: 16px 14px 14px;">
 
-            <div class="tl-wrap">
+            <div class="tl-wrap" style="max-height: none; mask-image: none; -webkit-mask-image: none;">
 
-              <!-- PERSEDIAAN -->
-              <div class="tl-group">
-                <div class="tl-group-label">
-                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                  Persediaan
+              <!-- Item 1 -->
+              <div class="tl-item">
+                <div class="tl-icon">
+                  <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                 </div>
-                <div class="tl-item">
-                  <div class="tl-icon">
-                    <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                  </div>
-                  <div class="tl-body">
-                    <span class="tl-time">1940H</span>
-                    <p class="tl-label">Pegawai Kadet Bertolak ke D'Lamar Dia</p>
-                  </div>
-                </div>
-                <div class="tl-item">
-                  <div class="tl-icon">
-                    <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                  </div>
-                  <div class="tl-body">
-                    <span class="tl-time">1955H</span>
-                    <p class="tl-label">Pegawai Kadet Berkumpul Di Dewan Utama</p>
-                  </div>
+                <div class="tl-body">
+                  <span class="tl-time">1940H</span>
+                  <p class="tl-label">Pegawai Kadet Tiba di D'Lamar Dia</p>
                 </div>
               </div>
 
-              <!-- PEMBUKAAN -->
-              <div class="tl-group">
-                <div class="tl-group-label">
-                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  Pembukaan
+              <!-- Item 2 -->
+              <div class="tl-item">
+                <div class="tl-icon accent-rose">
+                  <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                 </div>
-                <div class="tl-item">
-                  <div class="tl-icon accent-rose">
-                    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-                  </div>
-                  <div class="tl-body">
-                    <span class="tl-time">2000H</span>
-                    <p class="tl-label">Ketibaan Tetamu VIP</p>
-                  </div>
-                </div>
-                <div class="tl-item">
-                  <div class="tl-icon accent-rose">
-                    <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                  </div>
-                  <div class="tl-body">
-                    <span class="tl-time">2005H</span>
-                    <p class="tl-label">Tetamu VIP Diiring Masuk</p>
-                  </div>
-                </div>
-                <div class="tl-item">
-                  <div class="tl-icon">
-                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                  </div>
-                  <div class="tl-body">
-                    <span class="tl-time">2010H</span>
-                    <p class="tl-label">Gimik Pembukaan Majlis</p>
-                  </div>
-                </div>
-                <div class="tl-item">
-                  <div class="tl-icon accent-green">
-                    <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
-                  </div>
-                  <div class="tl-body">
-                    <span class="tl-time">2020H</span>
-                    <p class="tl-label">Sesi Menjamu Selera</p>
-                  </div>
+                <div class="tl-body">
+                  <span class="tl-time">2000H</span>
+                  <p class="tl-label">Ketibaan Tetamu VIP</p>
                 </div>
               </div>
 
-              <!-- PERSEMBAHAN & ANUGERAH BAHAGIAN 1 -->
-              <div class="tl-group">
-                <div class="tl-group-label">
-                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-                  Persembahan &amp; Hadiah
+              <!-- Item 3 — blok utama -->
+              <div class="tl-item" style="align-items:flex-start;">
+                <div class="tl-icon" style="margin-top:2px;">
+                  <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
                 </div>
-                <div class="tl-item">
-                  <div class="tl-icon accent-blue">
-                    <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-                  </div>
-                  <div class="tl-body">
-                    <span class="tl-time">2035H</span>
-                    <p class="tl-label">Persembahan Daripada Peringkat Junior</p>
-                  </div>
-                </div>
-                <div class="tl-item">
-                  <div class="tl-icon">
-                    <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
-                  </div>
-                  <div class="tl-body">
-                    <span class="tl-time">2040H</span>
-                    <p class="tl-label">Penyampaian Hadiah Pertandingan Rentas Halangan</p>
-                  </div>
-                </div>
-                <div class="tl-item">
-                  <div class="tl-icon accent-blue">
-                    <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-                  </div>
-                  <div class="tl-body">
-                    <span class="tl-time">2045H</span>
-                    <p class="tl-label">Persembahan Daripada Peringkat Intermediate</p>
-                  </div>
-                </div>
-                <div class="tl-item">
-                  <div class="tl-icon">
-                    <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
-                  </div>
-                  <div class="tl-body">
-                    <span class="tl-time">2050H</span>
-                    <p class="tl-label">Penyampaian Hadiah Pertandingan Eco-Challenge</p>
-                  </div>
-                </div>
-                <div class="tl-item">
-                  <div class="tl-icon accent-green">
-                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12l2.5 2.5L16 9"/></svg>
-                  </div>
-                  <div class="tl-body">
-                    <span class="tl-time">2055H</span>
-                    <p class="tl-label">Permainan Bottle Buffler</p>
-                  </div>
-                </div>
-                <div class="tl-item">
-                  <div class="tl-icon">
-                    <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
-                  </div>
-                  <div class="tl-body">
-                    <span class="tl-time">2115H</span>
-                    <p class="tl-label">Penyampaian Hadiah Pertandingan Menembak</p>
-                  </div>
-                </div>
-                <div class="tl-item">
-                  <div class="tl-icon accent-blue">
-                    <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-                  </div>
-                  <div class="tl-body">
-                    <span class="tl-time">2135H</span>
-                    <p class="tl-label">Persembahan Daripada Peringkat Senior</p>
-                  </div>
-                </div>
-                <div class="tl-item">
-                  <div class="tl-icon">
-                    <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
-                  </div>
-                  <div class="tl-body">
-                    <span class="tl-time">2140H</span>
-                    <p class="tl-label">Penyampaian Hadiah bagi Explorace</p>
-                  </div>
+                <div class="tl-body">
+                  <span class="tl-time">2005H – 2335H</span>
+                  <p class="tl-label">Perarakan Masuk Tetamu VIP</p>
+                  <p class="tl-label">Gimik Pembukaan Majlis</p>
+                  <p class="tl-label">Sesi Menjamu Selera</p>
+                  <p class="tl-label">Persembahan</p>
+                  <p class="tl-label">Penyampaian Hadiah</p>
+                  <p class="tl-label">Permainan</p>
+                  <p class="tl-label"><em>Outfit Showcase</em></p>
+                  <p class="tl-label">Sambutan Hari Lahir Bulan 7–12</p>
+                  <p class="tl-label">Video Montaj</p>
+                  <p class="tl-label">Ucapan Dari Ketua SKN 183</p>
                 </div>
               </div>
 
-              <!-- SHOWCASE & PERMAINAN -->
-              <div class="tl-group">
-                <div class="tl-group-label">
-                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-                  Showcase &amp; Permainan
+              <!-- Item 4 -->
+              <div class="tl-item">
+                <div class="tl-icon accent-green">
+                  <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
                 </div>
-                <div class="tl-item">
-                  <div class="tl-icon accent-rose">
-                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
-                  </div>
-                  <div class="tl-body">
-                    <span class="tl-time">2145H</span>
-                    <p class="tl-label">Outfit Showcase</p>
-                  </div>
-                </div>
-                <div class="tl-item">
-                  <div class="tl-icon">
-                    <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
-                  </div>
-                  <div class="tl-body">
-                    <span class="tl-time">2200H</span>
-                    <p class="tl-label">Penyampaian Hadiah bagi Jalan Laju</p>
-                  </div>
-                </div>
-                <div class="tl-item">
-                  <div class="tl-icon accent-blue">
-                    <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-                  </div>
-                  <div class="tl-body">
-                    <span class="tl-time">2205H</span>
-                    <p class="tl-label">Persembahan Daripada Peringkat Intermediate</p>
-                  </div>
-                </div>
-                <div class="tl-item">
-                  <div class="tl-icon">
-                    <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
-                  </div>
-                  <div class="tl-body">
-                    <span class="tl-time">2210H</span>
-                    <p class="tl-label">Penyampaian Hadiah Pertandingan Esport</p>
-                  </div>
-                </div>
-                <div class="tl-item">
-                  <div class="tl-icon accent-green">
-                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12l2.5 2.5L16 9"/></svg>
-                  </div>
-                  <div class="tl-body">
-                    <span class="tl-time">2215H</span>
-                    <p class="tl-label">Permainan The Secret Lineup</p>
-                  </div>
-                </div>
-                <div class="tl-item">
-                  <div class="tl-icon accent-blue">
-                    <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-                  </div>
-                  <div class="tl-body">
-                    <span class="tl-time">2225H</span>
-                    <p class="tl-label">Persembahan Daripada Peringkat Junior</p>
-                  </div>
+                <div class="tl-body">
+                  <span class="tl-time">2340H</span>
+                  <p class="tl-label">Sesi Bergambar</p>
                 </div>
               </div>
 
-              <!-- KEMUNCAK MALAM -->
-              <div class="tl-group">
-                <div class="tl-group-label">
-                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  Kemuncak Malam
+              <!-- Item 5 -->
+              <div class="tl-item">
+                <div class="tl-icon">
+                  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                 </div>
-                <div class="tl-item">
-                  <div class="tl-icon accent-rose">
-                    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-                  </div>
-                  <div class="tl-body">
-                    <span class="tl-time">2230H</span>
-                    <p class="tl-label">Sesi Pemotongan Kek — Sambutan Hari Lahir Bulan 7–12</p>
-                  </div>
-                </div>
-                <div class="tl-item">
-                  <div class="tl-icon accent-blue">
-                    <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-                  </div>
-                  <div class="tl-body">
-                    <span class="tl-time">2245H</span>
-                    <p class="tl-label">Persembahan Daripada Peringkat Senior</p>
-                  </div>
-                </div>
-                <div class="tl-item">
-                  <div class="tl-icon accent-rose">
-                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  </div>
-                  <div class="tl-body">
-                    <span class="tl-time">2250H</span>
-                    <p class="tl-label">Penobatan King &amp; Queen of the Night</p>
-                  </div>
-                </div>
-                <div class="tl-item">
-                  <div class="tl-icon">
-                    <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-                  </div>
-                  <div class="tl-body">
-                    <span class="tl-time">2255H</span>
-                    <p class="tl-label">Persembahan Daripada Pegawai Muda</p>
-                  </div>
-                </div>
-                <div class="tl-item">
-                  <div class="tl-icon accent-blue">
-                    <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><path d="M8 21h8M12 17v4"/></svg>
-                  </div>
-                  <div class="tl-body">
-                    <span class="tl-time">2300H</span>
-                    <p class="tl-label">Tayangan Montaj Latihan Berterusan</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- ANUGERAH & PENUTUP -->
-              <div class="tl-group">
-                <div class="tl-group-label">
-                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
-                  Anugerah &amp; Penutup
-                </div>
-                <div class="tl-item">
-                  <div class="tl-icon">
-                    <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
-                  </div>
-                  <div class="tl-body">
-                    <span class="tl-time">2310H</span>
-                    <p class="tl-label">Anugerah Pelatih Terbaik Latihan Berterusan</p>
-                  </div>
-                </div>
-                <div class="tl-item">
-                  <div class="tl-icon">
-                    <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
-                  </div>
-                  <div class="tl-body">
-                    <span class="tl-time">2315H</span>
-                    <p class="tl-label">Anugerah Anjakan Paradigma</p>
-                  </div>
-                </div>
-                <div class="tl-item">
-                  <div class="tl-icon">
-                    <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
-                  </div>
-                  <div class="tl-body">
-                    <span class="tl-time">2320H</span>
-                    <p class="tl-label">Anugerah Olahragawan &amp; Olahragawati</p>
-                  </div>
-                </div>
-                <div class="tl-item">
-                  <div class="tl-icon accent-blue">
-                    <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><path d="M8 21h8M12 17v4"/></svg>
-                  </div>
-                  <div class="tl-body">
-                    <span class="tl-time">2325H</span>
-                    <p class="tl-label">Tayangan Legasi Sayap AQUILA</p>
-                  </div>
-                </div>
-                <div class="tl-item">
-                  <div class="tl-icon accent-rose">
-                    <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-                  </div>
-                  <div class="tl-body">
-                    <span class="tl-time">2335H</span>
-                    <p class="tl-label">Ucapan Penutup oleh Ketua SKN 183 —<br>Kapt Tuan Mohd Rizqin bin Tuan Ab Aziz TUDM</p>
-                  </div>
-                </div>
-                <div class="tl-item">
-                  <div class="tl-icon accent-green">
-                    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-                  </div>
-                  <div class="tl-body">
-                    <span class="tl-time">2340H</span>
-                    <p class="tl-label">Sesi Bergambar</p>
-                  </div>
-                </div>
-                <div class="tl-item">
-                  <div class="tl-icon">
-                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                  </div>
-                  <div class="tl-body">
-                    <span class="tl-time">0000H</span>
-                    <p class="tl-label">Majlis Dijangka Selesai</p>
-                  </div>
+                <div class="tl-body">
+                  <span class="tl-time">0000H</span>
+                  <p class="tl-label">Majlis Dijangka Selesai</p>
                 </div>
               </div>
 
             </div><!-- end tl-wrap -->
-
-            <div class="tl-scroll-hint">
-              <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
-              Tatal untuk lihat senarai penuh
-            </div>
 
           </div>
         </section>
