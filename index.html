@@ -1854,15 +1854,24 @@
     </div>
   </div>
 
-  <!-- Hidden YouTube player. Ganti VIDEO_ID dengan ID lagu YouTube pilihan anda -->
-  <iframe id="ytframe" src="" allow="autoplay" title="muzik latar"></iframe>
+  <!-- Hidden audio player — tiada iklan, tiada YouTube Premium diperlukan -->
+  <audio id="bgAudio" loop preload="none"></audio>
 
   <script>
     /* ============ TETAPAN BOLEH UBAH ============ */
     const EVENT_DATE = new Date("2026-07-29T20:00:00+08:00"); // tarikh & masa majlis
-    const YOUTUBE_VIDEO_ID = "f-PRMB1SsHM"; // GANTI dengan ID video YouTube (bahagian selepas v= dalam URL)
-    const YOUTUBE_START_SECONDS = 36; // video akan mula main dari saat ke-36
-    const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzRiI4rchQllg5oE7gCd9aSVBy4jKMv6LioAPIfkqdwlFCLX1jgcwXKa9FVYknAE9g6QQ/exec"; // URL Web App Apps Script (sudah deploy)
+
+    // -- MUZIK LATAR --
+    // Letak fail audio dalam folder projek, contoh: "audio/bgmusic.mp3"
+    // Letak null untuk guna YouTube (ada risiko iklan)
+    const AUDIO_FILE = "audio/bgmusic.mp3"; // <-- TUKAR ke null jika mahu guna YouTube
+    const AUDIO_START_SECONDS = 0;           // mula dari saat ke berapa
+
+    // Tetapan YouTube (hanya digunakan jika AUDIO_FILE = null)
+    const YOUTUBE_VIDEO_ID = "f-PRMB1SsHM";
+    const YOUTUBE_START_SECONDS = 36;
+
+    const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzRiI4rchQllg5oE7gCd9aSVBy4jKMv6LioAPIfkqdwlFCLX1jgcwXKa9FVYknAE9g6QQ/exec";
     const JURULATIH_LIST = [
       "727958 Sjn U Mohamad Aliuddin bin Mohd Saleh",
       "730371 Kpl U Muhammad Azmie bin Mohd Nawi",
@@ -1873,23 +1882,46 @@
     const VIP_LIST = ["Kapt Tuan Mohd Rizqin bin Tuan Ab Aziz TUDM (375735)"];
     /* ============================================= */
 
-    const ytframe = document.getElementById('ytframe');
+    // -- Audio engine --
+    const bgAudio = document.getElementById('bgAudio');
     let musicOn = true;
 
-    function ytCommand(func) {
-      try {
-        ytframe.contentWindow.postMessage(JSON.stringify({ event: 'command', func: func, args: [] }), '*');
-      } catch (e) { }
+    function startMusic() {
+      if (AUDIO_FILE) {
+        // Guna HTML5 audio — tiada iklan
+        bgAudio.src = AUDIO_FILE;
+        bgAudio.currentTime = AUDIO_START_SECONDS;
+        bgAudio.play().catch(() => {
+          // Autoplay blocked — user interaction sudah berlaku (click enterBtn), ini jarang berlaku
+          musicOn = false;
+          document.getElementById('muteIcon').style.opacity = '0.4';
+        });
+      } else {
+        // Fallback: YouTube iframe (ada risiko iklan)
+        const ytframe = document.getElementById('bgAudio'); // tidak digunakan
+        const yt = document.createElement('iframe');
+        yt.id = 'ytframe';
+        yt.src = `https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&enablejsapi=1&controls=0&loop=1&playlist=${YOUTUBE_VIDEO_ID}&start=${YOUTUBE_START_SECONDS}`;
+        yt.allow = 'autoplay';
+        yt.style.cssText = 'position:fixed;width:2px;height:2px;bottom:0;right:0;border:0;opacity:0.01;pointer-events:none;';
+        document.body.appendChild(yt);
+      }
     }
 
     document.getElementById('enterBtn').addEventListener('click', function () {
-      ytframe.src = `https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&enablejsapi=1&controls=0&loop=1&playlist=${YOUTUBE_VIDEO_ID}&start=${YOUTUBE_START_SECONDS}`;
+      startMusic();
       document.getElementById('splash').classList.add('hide');
     });
 
     document.getElementById('muteBtn').addEventListener('click', function () {
       musicOn = !musicOn;
-      ytCommand(musicOn ? 'playVideo' : 'pauseVideo');
+      if (AUDIO_FILE) {
+        if (musicOn) {
+          bgAudio.play();
+        } else {
+          bgAudio.pause();
+        }
+      }
       document.getElementById('muteIcon').style.opacity = musicOn ? '1' : '0.4';
     });
 
